@@ -1,29 +1,20 @@
-name: GitHub Pages
+name: Docs
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
+  workflow_run:
+    workflows: ["Tests"]
+    types:
+      - completed
+
+env:
+  CARGO_TERM_COLOR: always
 
 jobs:
-  deploy:
-    runs-on: ubuntu-20.04
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+  build:
+
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup mdBook
-        uses: peaceiris/actions-mdbook@v1
-        with:
-           mdbook-version: 'latest'
-
-      - run: mdbook build
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book
+    - uses: actions/checkout@v3       
+    - name: Install MDBook
+      run: cargo install mdbook
