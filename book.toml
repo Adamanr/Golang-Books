@@ -1,0 +1,6 @@
+[book]
+authors = ["adamanr"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Курс по Golang"
