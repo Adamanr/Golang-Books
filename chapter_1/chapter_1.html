@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Курс по Golang</title>
-        <meta name="robots" content="noindex">
+        <title>Введение - Курс по Golang</title>
 
 
         <!-- Custom HTML head -->
@@ -13,21 +12,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -36,7 +35,7 @@
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -89,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_1.html"><strong aria-hidden="true">2.</strong> Введение</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_1/chapter_2.html"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2/chapter_1.html"><strong aria-hidden="true">3.</strong> Основы Go</a></li><li class="chapter-item expanded "><a href="chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Погружение в Go</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_1.html" class="active"><strong aria-hidden="true">2.</strong> Введение</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_1/chapter_2.html"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_1.html"><strong aria-hidden="true">3.</strong> Основы Go</a></li><li class="chapter-item expanded "><a href="../chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Погружение в Go</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -145,7 +144,7 @@
                     <h1 class="menu-title">Курс по Golang</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -174,19 +173,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2 id="Всем-привет"><a class="header" href="#Всем-привет">Всем привет!</a></h2>
-<p>Этот учебник создан для того, чтобы каждый желающий мог освоить Go без лишних сложностей. Я постарался сделать курс доступным и интересным как для новичков, так и для тех, кто уже знаком с программированием. Мы изучим не только базовые аспекты языка, но и погрузимся в его системные глубины — разберёмся, как работает сборщик мусора (GC), планировщик (Scheduler) и другие внутренние механизмы Go.</p>
-<p>Помимо самого Go, мы уделим внимание важным библиотекам и технологиям, которые помогают в реальных проектах: Kafka, SQL (в частности PostgreSQL), Redis, Docker, Podman, Kubernetes, и многому другому.</p>
-<h3 id="Почему-этот-учебник-бесплатен"><a class="header" href="#Почему-этот-учебник-бесплатен">Почему этот учебник бесплатен?</a></h3>
-<p>Главная идея — сделать обучение Go проще и доступнее. Я не претендую на строгое следование каким-либо Style guide, а предоставляю информацию, основанную на своём личном опыте и проверенных источниках, таких как книги и статьи. Здесь вы найдёте свободный подход, без платных разделов и без навязывания единственно верных решений. Этот курс — скорее отправная точка, чтобы вы могли сами выбрать инструменты и подходы, которые вам подходят.</p>
-<p>Если у вас появятся вопросы, предложения или критика, пишите мне в <a href="https://t.me/Adamanq">Telegram</a> или оставляйте замечания в репозитории на GitHub. Я всегда рад обратной связи и готов сделать курс ещё лучше для вас!</p>
-<h3 id="Полезные-ссылки"><a class="header" href="#Полезные-ссылки">Полезные ссылки:</a></h3>
-<ul>
-<li><a href="https://t.me/behind_the_circus">Мой канал в Telegram про IT</a> — делюсь личным опытом и обсуждаю современные технологии.</li>
-<li><a href="https://www.donationalerts.com/r/adamancry">Поддержать проект</a> — если вам понравился учебник, и вы хотите поддержать дальнейшее развитие.</li>
-</ul>
-<hr />
-<div style="break-before: page; page-break-before: always;"></div><h1 id="Что-такое-go"><a class="header" href="#Что-такое-go">Что такое Go</a></h1>
+                        <h1 id="Что-такое-go"><a class="header" href="#Что-такое-go">Что такое Go</a></h1>
 <p>Go — это не просто язык. Это инструмент, созданный для реальных задач: высоконагруженных систем, микросервисной архитектуры и быстрой разработки. За счёт своего простого и понятного синтаксиса, встроенной поддержки параллелизма и строгой типизации, Go уже завоевал сердца тысяч разработчиков по всему миру. Кроме того, в настоящее время компании активно внедряют Go, как основной язык для проектов различной сложности, от телефонии, до разработки простых сайтов компании. Язык имеет одно из наименьших количеств ключевых слов (25 слов, по сравнению с Python(35) и Java(50)) что означает, что вам не понадобится много времени, для запоминания стандартных конструкций.</p>
 <h1 id="Для-чего-используется-go"><a class="header" href="#Для-чего-используется-go">Для чего используется Go</a></h1>
 <p>Go язык обширный и на нём можно написать практически что угодно, дело лишь в удобстве подхода с использованием Go. Так например, если вы хотите написать на Go своё десткопное приложение, то пожалуйста - <a href="https://wails.io">Wails</a>, а если вы хотите написать игру на Go, то тоже без проблем - <a href="https://ebitengine.org">Ebitengine</a>. Я не берусь спорить за удобство данных фреймворков и их "лучшую" работоспособность, но практика показывает, что иногда нам может и не пригодится лишняя скорость работы приложения. Из основного, что разрабатывают сейчас на Go - микросервисы, высоконагруженные приложения. Кроме этих двух отраслей, есть ещё различные применения, что тоже имеют место быть в топе, но их делают реже, а это - backend-часть различных веб-приложений, cli-утилиты, разработка в сфере ИБ (Информационной безопасности) и наверно, что-то ещё делают, но я чаще видел это.</p>
@@ -245,70 +232,18 @@
 <li>Создайте файл main.go</li>
 <li>Ваш проект готов!</li>
 </ol>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="Урок-1-Первое-знакомство-с-go"><a class="header" href="#Урок-1-Первое-знакомство-с-go">Урок 1: Первое знакомство с Go</a></h1>
-<p>Добро пожаловать в ваш первый урок по Go! Мы начнем с классического примера, с которого все программисты начинают своё путешествие — с вывода <strong>"Hello, World!"</strong>. Но, как и подобает разработчикам на Go, мы разберём этот код детально, чтобы понять не только, как его написать, но и почему он работает именно так.</p>
-<h2 id="Как-выглядит-программа-hello-world-на-go"><a class="header" href="#Как-выглядит-программа-hello-world-на-go">Как выглядит программа "Hello, World!" на Go?</a></h2>
-<p>Вот наш код:</p>
-<pre><code class="language-Go">package main 
 
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, World!") // Выведет: Hello, World!
-}
-</code></pre>
-<p>Теперь давайте разберём его по частям.</p>
-<h2 id="Разбор-кода"><a class="header" href="#Разбор-кода">Разбор кода</a></h2>
-<h3 id="1-package-main"><a class="header" href="#1-package-main">1. <strong>package main</strong></a></h3>
-<p>Пакет — это основная единица организации кода в Go, которая представляет удобную организацию разделения кода на отдельные части или модули. <strong><code>package main</code></strong> — особенный пакет, который сообщает компилятору, что именно этот файл является точкой входа в программу, и именно с него всё начнётся. Без этого пакет не скомпилируется как исполняемый файл.</p>
-<p>Пакеты помогают организовать код и добавлять новые возможности. Go имеет мощную стандартную библиотеку с множеством готовых решений (например, для работы с файлами, сетью и т.д.), но вы можете писать и свои пакеты для повторного использования в других проектах.</p>
-<h3 id="2-import-fmt"><a class="header" href="#2-import-fmt">2. <strong>import "fmt"</strong></a></h3>
-<p>Ключевое слово <strong><code>import</code></strong> позволяет подключать внешние зависимости, будь то пакеты из стандартной библиотеки или сторонние решения. В нашем примере мы используем <strong><code>fmt</code></strong> — это библиотека для работы с вводом и выводом, которая входит в стандартную библиотеку Go. Она позволяет выводить данные в консоль, а также выполнять другие операции с текстом. Важно отметить, что пакет <strong>fmt</strong> вам не нужно отдельно устанавливать — он уже включён в Go.</p>
-<h3 id="3-func-main"><a class="header" href="#3-func-main">3. <strong>func main()</strong></a></h3>
-<p>Функция <strong><code>main()</code></strong> — это "точка входа" в любую программу на Go. Каждый исполняемый файл должен иметь функцию с именем <strong>main</strong>, иначе программа просто не запустится. Это ваша отправная точка — отсюда начинается выполнение всей логики программы.</p>
-<p>Функции в Go определяются с помощью ключевого слова <strong><code>func</code></strong>. Далее указывается имя функции, а в скобках могут быть переданы параметры, если они нужны.</p>
-<h3 id="4-fmtprintln"><a class="header" href="#4-fmtprintln">4. <strong>fmt.Println()</strong></a></h3>
-<p>Функция <strong><code>fmt.Println()</code></strong> — это простой способ вывести строку в консоль. Внутри скобок указываем текст, который хотим вывести, в данном случае: <strong>"Hello, World!"</strong>. В конце выполнения <strong><code>Println</code></strong> автоматически добавляет новую строку.</p>
-<blockquote>
-<p>Кстати, у <strong>fmt</strong> есть и другие полезные функции для вывода:</p>
-<ul>
-<li><strong><code>fmt.Print()</code></strong> — вывод без добавления новой строки. Следующий вывод будет продолжен в той же строке.</li>
-<li><strong><code>fmt.Printf()</code></strong> — форматированный вывод, позволяющий вставлять значения в строку.</li>
-</ul>
-</blockquote>
-<h3 id="Пример-использования-других-методов"><a class="header" href="#Пример-использования-других-методов">Пример использования других методов:</a></h3>
-<pre><code class="language-Go">fmt.Print("Hello, ")
-fmt.Print("World!")  // Выведет: Hello, World!
-</code></pre>
-<pre><code class="language-Go">fmt.Printf("Привет, %s! Тебе %d лет.", "Иван", 25) // Выведет: Привет, Иван! Тебе 25 лет.
-</code></pre>
-<p>Где <code>%s</code> заменится на строку, а <code>%d</code> — на число.</p>
-<p>Таким образом, <strong><code>fmt</code></strong> предоставляет разные варианты для вывода текста в зависимости от ваших нужд.</p>
-<hr />
-<h2 id="Дополнительные-задания"><a class="header" href="#Дополнительные-задания">Дополнительные задания:</a></h2>
-<p>Чтобы закрепить материал, попробуйте выполнить следующие задачи:</p>
-<ol>
-<li><strong>Выведите сообщение "Привет, <em>Ваше имя</em>"</strong> с помощью <strong><code>fmt.Println()</code></strong>.</li>
-<li><strong>Используйте <code>fmt.Print()</code></strong>, чтобы вывести ваше имя и фамилию в одной строке без перехода на новую строку.</li>
-<li><strong>Используйте <code>fmt.Printf()</code></strong> для форматированного вывода:<br />
-Например, выведите строку вида:
-<pre><code class="language-Go">fmt.Printf("Привет, %s! Тебе %d лет.", "Иван", 25)
-</code></pre>
-Замените "Иван" и возраст на свои данные.<br><br></li>
-</ol>
-<blockquote>
-<p><em><strong>Совет:</strong></em>
-Когда вы начнёте решать задания, обратите внимание на то, как Go управляет строками и форматирует вывод. Чем лучше вы поймёте эти базовые конструкции, тем легче будет разбираться в более сложных вещах, которые ждут вас в следующих уроках.</p>
-</blockquote>
-<h2 id="Итог"><a class="header" href="#Итог">Итог</a></h2>
-<p>Этот урок познакомил вас с основными концепциями Go и позволил ощутить его простоту и элегантность. В следующих уроках мы углубимся в типы данных, переменные и управление потоками выполнения программы.</p>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="Основы-go"><a class="header" href="#Основы-go">Основы Go</a></h1>
-<div style="break-before: page; page-break-before: always;"></div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
+                            <a rel="next prefetch" href="../chapter_1/chapter_2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -316,7 +251,13 @@ fmt.Print("World!")  // Выведет: Hello, World!
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
+                    <a rel="next prefetch" href="../chapter_1/chapter_2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
@@ -329,21 +270,16 @@ fmt.Print("World!")  // Выведет: Hello, World!
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 
-        <script>
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
 
     </div>
     </body>
