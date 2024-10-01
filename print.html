@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_1.html"><strong aria-hidden="true">2.</strong> Введение</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_1/chapter_2.html"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2/chapter_1.html"><strong aria-hidden="true">3.</strong> Основы Go</a></li><li class="chapter-item expanded "><a href="chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Погружение в Go</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_1.html"><strong aria-hidden="true">2.</strong> Основы Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_1/chapter_2.html"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_4.html"><strong aria-hidden="true">2.3.</strong> Основные конструкции управления в Go</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_5.html"><strong aria-hidden="true">2.4.</strong> Slice, map и их особенности</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_6.html"><strong aria-hidden="true">2.5.</strong> Горутины</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_7.html"><strong aria-hidden="true">2.6.</strong> Методы синхронизации между горутинами</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_8.html"><strong aria-hidden="true">2.7.</strong> Интерфейсы</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_9.html"><strong aria-hidden="true">2.8.</strong> Структуры, интерфейсы и реверсивные методы</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_10.html"><strong aria-hidden="true">2.9.</strong> Работа с паникой и defer</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_11.html"><strong aria-hidden="true">2.10.</strong> Работа с файловой системой</a></li><li class="chapter-item expanded "><a href="chapter_1/chapter_12.html"><strong aria-hidden="true">2.11.</strong> Generics</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2/chapter_0.html"><strong aria-hidden="true">3.</strong> Погружение в глубину</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_2/chapter_1.html"><strong aria-hidden="true">3.1.</strong> Интерфейсы, рефлексия и type switch</a></li><li class="chapter-item expanded "><a href="chapter_2/chapter_2.html"><strong aria-hidden="true">3.2.</strong> Slice, map глубже</a></li><li class="chapter-item expanded "><a href="chapter_2/chapter_3.html"><strong aria-hidden="true">3.3.</strong> Горутины, sync.Cord и Worker Pool</a></li><li class="chapter-item expanded "><a href="chapter_2/chapter_4.html"><strong aria-hidden="true">3.4.</strong> Scheduler и уникальность горутин</a></li><li class="chapter-item expanded "><a href="chapter_2/chapter_5.html"><strong aria-hidden="true">3.5.</strong> Небезопасный Go</a></li><li class="chapter-item expanded "><a href="chapter_2/chapter_6.html"><strong aria-hidden="true">3.6.</strong> Системное программирование в Go и сигналы</a></li><li class="chapter-item expanded "><a href="chapter_2/chapter_7.html"><strong aria-hidden="true">3.7.</strong> GC и методы работы с ним</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Библиотеки Go</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -186,13 +186,31 @@
 <li><a href="https://www.donationalerts.com/r/adamancry">Поддержать проект</a> — если вам понравился учебник, и вы хотите поддержать дальнейшее развитие.</li>
 </ul>
 <hr />
-<div style="break-before: page; page-break-before: always;"></div><h1 id="Что-такое-go"><a class="header" href="#Что-такое-go">Что такое Go</a></h1>
-<p>Go — это не просто язык. Это инструмент, созданный для реальных задач: высоконагруженных систем, микросервисной архитектуры и быстрой разработки. За счёт своего простого и понятного синтаксиса, встроенной поддержки параллелизма и строгой типизации, Go уже завоевал сердца тысяч разработчиков по всему миру. Кроме того, в настоящее время компании активно внедряют Go, как основной язык для проектов различной сложности, от телефонии, до разработки простых сайтов компании. Язык имеет одно из наименьших количеств ключевых слов (25 слов, по сравнению с Python(35) и Java(50)) что означает, что вам не понадобится много времени, для запоминания стандартных конструкций.</p>
-<h1 id="Для-чего-используется-go"><a class="header" href="#Для-чего-используется-go">Для чего используется Go</a></h1>
-<p>Go язык обширный и на нём можно написать практически что угодно, дело лишь в удобстве подхода с использованием Go. Так например, если вы хотите написать на Go своё десткопное приложение, то пожалуйста - <a href="https://wails.io">Wails</a>, а если вы хотите написать игру на Go, то тоже без проблем - <a href="https://ebitengine.org">Ebitengine</a>. Я не берусь спорить за удобство данных фреймворков и их "лучшую" работоспособность, но практика показывает, что иногда нам может и не пригодится лишняя скорость работы приложения. Из основного, что разрабатывают сейчас на Go - микросервисы, высоконагруженные приложения. Кроме этих двух отраслей, есть ещё различные применения, что тоже имеют место быть в топе, но их делают реже, а это - backend-часть различных веб-приложений, cli-утилиты, разработка в сфере ИБ (Информационной безопасности) и наверно, что-то ещё делают, но я чаще видел это.</p>
-<h1 id="Особенности-перехода-и-изучения"><a class="header" href="#Особенности-перехода-и-изучения">Особенности перехода и изучения</a></h1>
-<p>Если вы переходите на Go с другого языка, то держитесь. В языке Go нет привычной многословности, как например есть в других backend языках. Конструкций в Go не так много, основное - if / switch / for, а вместо классов и типичного ООП у нас struct и interface. Если вы ещё новичок, то вам повезло, ведь для вас в каком-то роде, будет проще работать с меньшим количеством символов, всё просто и понятно, но так ли хорошо иметь так мало конструкций, это уже решите вы.</p>
-<h1 id="Создание-проекта-на-go"><a class="header" href="#Создание-проекта-на-go">Создание проекта на Go</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Что-такое-go"><a class="header" href="#Что-такое-go">Что такое Go?</a></h1>
+<p>Go — это гораздо больше, чем просто язык программирования. Это мощный инструмент, созданный для решения реальных задач: разработки высоконагруженных систем, микросервисов и приложений, где важны скорость и эффективность. Благодаря простому и лаконичному синтаксису, встроенной поддержке параллелизма и строгой статической типизации, Go стал фаворитом среди тысяч разработчиков по всему миру. Компании всё чаще выбирают Go для создания разнообразных проектов: от высокотехнологичных решений в сфере телекоммуникаций до простых веб-приложений.</p>
+<p>Одна из ключевых особенностей Go — его минимализм. Язык содержит всего 25 ключевых слов (в сравнении с 35 в Python и 50 в Java), что делает его легче для освоения. Вам не придётся учить множество синтаксических конструкций, чтобы быстро погрузиться в разработку. Но за этой простотой стоит мощный набор возможностей для создания сложных и масштабируемых решений.</p>
+<hr />
+<h1 id="Для-чего-используется-go"><a class="header" href="#Для-чего-используется-go">Для чего используется Go?</a></h1>
+<p>Go — универсальный язык, который позволяет решать самые разные задачи. Вы можете использовать его для создания практически любых типов приложений. Хотите разработать десктопное приложение? Воспользуйтесь фреймворком <a href="https://wails.io">Wails</a>. Мечтаете написать игру? Тогда на помощь придёт <a href="https://ebitengine.org">Ebitengine</a>.</p>
+<p>Хотя для таких задач существуют другие языки, Go активно используется там, где критически важны производительность и простота. Основные направления, в которых Go сейчас занимает лидирующие позиции, — это:</p>
+<ul>
+<li><strong>Микросервисы</strong>: Go идеально подходит для разработки распределённых систем с высокой производительностью.</li>
+<li><strong>Высоконагруженные системы</strong>: благодаря эффективной работе с многопоточностью и параллелизмом, Go позволяет создавать системы, которые справляются с большими объёмами данных и запросов.</li>
+</ul>
+<p>Также Go активно используется для:</p>
+<ul>
+<li>Разработки <strong>backend-частей веб-приложений</strong>,</li>
+<li>Создания <strong>CLI-утилит</strong> (командных интерфейсов),</li>
+<li>Проектов в области <strong>информационной безопасности</strong>.</li>
+</ul>
+<p>Хотя Go может быть применён практически для любой задачи, его сильные стороны лучше всего раскрываются в проектах, где важны скорость и надёжность.</p>
+<hr />
+<h1 id="Особенности-перехода-на-go-и-изучения"><a class="header" href="#Особенности-перехода-на-go-и-изучения">Особенности перехода на Go и изучения</a></h1>
+<p>Если вы переходите на Go с другого языка программирования, вас ждут интересные открытия. В отличие от многих языков, Go избегает многословности и избыточных конструкций. Здесь всё максимально упрощено, что может сначала показаться ограничением, но на практике это делает код более читаемым и поддерживаемым.</p>
+<p>В Go всего несколько базовых конструкций управления, таких как <strong>if</strong>, <strong>switch</strong> и <strong>for</strong>. Вместо традиционного объектно-ориентированного подхода с классами, Go предлагает использовать <strong>структуры (struct)</strong> и <strong>интерфейсы (interface)</strong> для организации кода.</p>
+<p>Новичкам особенно повезло — минимализм Go делает его доступным для быстрого освоения. Меньше синтаксических правил, больше концентрации на логике программы. Однако, насколько удобным для вас окажется такой подход, вы решите сами.</p>
+<hr />
+<h1 id="Установка-go"><a class="header" href="#Установка-go">Установка Go</a></h1>
 <p>Для изучения Go вам понадобится Go проект на своём компьютере, чтобы вы могли запускать код из примеров и выполнять дополнительные задания для лучшего изучения языка. Для начала перейдём на <a href="https://go.dev/dl/">сайт Go</a> и скачаем компилятор:<br><br>
 <strong>Windows</strong>:</p>
 <ol>
@@ -236,7 +254,8 @@
 <li>Пакет устанавливает Go в <em><strong>/usr/local/go</strong></em>. Каталог <em><strong>/usr/local/go/bin</strong></em> в вашу переменную среды (PATH). Возможно, вам придется перезапустить открытые сеансы терминала, чтобы изменения вступили в силу.</li>
 <li>Убедитесь, что вы установили Go, открыв командную строку и набрав следующая команда: <code>go version</code></li>
 </ol>
-<h1 id="Создание-проекта-на-go-1"><a class="header" href="#Создание-проекта-на-go-1">Создание проекта на go</a></h1>
+<hr />
+<h1 id="Создание-проекта-на-go"><a class="header" href="#Создание-проекта-на-go">Создание проекта на go</a></h1>
 <p>Теперь после установки Go создадим свой первый проект на Go.</p>
 <ol>
 <li>Создайте папку для проекта (Она может иметь любое название, но лучше в стиле app1)</li>
@@ -285,6 +304,34 @@ fmt.Print("World!")  // Выведет: Hello, World!
 <p>Где <code>%s</code> заменится на строку, а <code>%d</code> — на число.</p>
 <p>Таким образом, <strong><code>fmt</code></strong> предоставляет разные варианты для вывода текста в зависимости от ваших нужд.</p>
 <hr />
+<h2 id="Ввод-данных-с-fmtscan"><a class="header" href="#Ввод-данных-с-fmtscan">Ввод данных с fmt.Scan</a></h2>
+<p>Теперь давайте добавим интерактивность в нашу программу. Мы будем не только выводить текст, но и принимать ввод от пользователя с помощью функции fmt.Scan.</p>
+<p>Пример с использованием fmt.Scan:</p>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+   var name string
+   fmt.Println("Введите ваше имя:")
+   fmt.Scan(&amp;name) // Считывает ввод пользователя
+   fmt.Printf("Привет, %s!\n", name) // Приветствует пользователя
+}
+</code></pre>
+<h3 id="Как-работает-fmtscan"><a class="header" href="#Как-работает-fmtscan">Как работает fmt.Scan?</a></h3>
+<ul>
+<li>fmt.Scan считывает данные, вводимые пользователем, и сохраняет их в переменную, переданную по ссылке (через &amp;).</li>
+<li>В данном примере мы объявили переменную name типа string и затем передали её в fmt.Scan(&amp;name).</li>
+<li>Пользователь вводит своё имя, и программа выводит приветствие, используя fmt.Printf для форматированного вывода.</li>
+</ul>
+<h4 id="Несколько-переменных-с-fmtscan"><a class="header" href="#Несколько-переменных-с-fmtscan">Несколько переменных с fmt.Scan:</a></h4>
+<p>Можно одновременно считывать несколько переменных:</p>
+<pre><code class="language-go">   var firstName, lastName string
+   fmt.Println("Введите ваше имя и фамилию:")
+   fmt.Scan(&amp;firstName, &amp;lastName)
+   fmt.Printf("Привет, %s %s!\n", firstName, lastName)
+</code></pre>
+<p>Здесь функция fmt.Scan ждёт два значения (имя и фамилию) и сохраняет их в соответствующие переменные.</p>
 <h2 id="Дополнительные-задания"><a class="header" href="#Дополнительные-задания">Дополнительные задания:</a></h2>
 <p>Чтобы закрепить материал, попробуйте выполнить следующие задачи:</p>
 <ol>
@@ -295,6 +342,7 @@ fmt.Print("World!")  // Выведет: Hello, World!
 <pre><code class="language-Go">fmt.Printf("Привет, %s! Тебе %d лет.", "Иван", 25)
 </code></pre>
 Замените "Иван" и возраст на свои данные.<br><br></li>
+<li><strong>Добавьте в программу ввод возраста с помощью fmt.Scan</strong> и выведите сообщение: "Привет, Ваше имя! Тебе возраст лет".</li>
 </ol>
 <blockquote>
 <p><em><strong>Совет:</strong></em>
@@ -302,7 +350,1687 @@ fmt.Print("World!")  // Выведет: Hello, World!
 </blockquote>
 <h2 id="Итог"><a class="header" href="#Итог">Итог</a></h2>
 <p>Этот урок познакомил вас с основными концепциями Go и позволил ощутить его простоту и элегантность. В следующих уроках мы углубимся в типы данных, переменные и управление потоками выполнения программы.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Переменные-и-типы-данных-в-go-просто-и-эффективно"><a class="header" href="#Переменные-и-типы-данных-в-go-просто-и-эффективно">Переменные и типы данных в Go: просто и эффективно</a></h1>
+<p>Переменные — это основа любой программы. Если вы уже работали с другими языками программирования, то вам понравится минималистичный и строгий подход Go к объявлению и использованию переменных, а также к работе с типами данных.</p>
+<hr />
+<h2 id="Что-такое-переменная"><a class="header" href="#Что-такое-переменная">Что такое переменная?</a></h2>
+<p>Переменная — это контейнер для хранения данных, которые могут изменяться в процессе выполнения программы. В Go все переменные имеют <strong>явный тип</strong>, что означает, что их тип нужно либо явно указать при объявлении, либо он будет выведен компилятором на основе значения переменной.</p>
+<h3 id="Пример-объявления-переменной"><a class="header" href="#Пример-объявления-переменной">Пример объявления переменной:</a></h3>
+<pre><code class="language-go">var age int
+age = 30
+</code></pre>
+<p>В этом примере мы объявляем переменную <strong>age</strong> типа <strong>int</strong> (целое число) и присваиваем ей значение <strong>30</strong>. Go требует, чтобы каждая переменная имела конкретный тип, и вы не сможете присвоить переменной значение другого типа без явного преобразования.</p>
+<hr />
+<h2 id="Способы-объявления-переменных"><a class="header" href="#Способы-объявления-переменных">Способы объявления переменных</a></h2>
+<p>Go предлагает несколько способов объявления переменных, в зависимости от ситуации:</p>
+<h3 id="1-Объявление-через-var"><a class="header" href="#1-Объявление-через-var">1. <strong>Объявление через <code>var</code></strong></a></h3>
+<p>Классический способ — использовать ключевое слово <strong><code>var</code></strong>:</p>
+<pre><code class="language-go">var name string
+name = "Иван"
+</code></pre>
+<p>Здесь мы явно указываем тип переменной <strong><code>string</code></strong> и затем присваиваем ей значение. Можно сделать это всё в одной строке:</p>
+<pre><code class="language-go">var name string = "Иван"
+</code></pre>
+<p>Этот способ полезен, когда вам нужно заранее определить переменную и возможно присвоить значение позже.</p>
+<h3 id="2-Краткая-форма-объявления"><a class="header" href="#2-Краткая-форма-объявления">2. <strong>Краткая форма объявления</strong></a></h3>
+<p>Одной из фишек Go является так называемое <strong>короткое объявление переменных</strong>. С помощью оператора <strong><code>:=</code></strong> вы можете объявлять переменные без явного указания типа:</p>
+<pre><code class="language-go">age := 30
+</code></pre>
+<p>В этом случае Go самостоятельно выводит тип переменной на основе присваиваемого значения. Здесь тип переменной будет <strong><code>int</code></strong>, так как 30 — это целое число.</p>
+<hr />
+<h2 id="Множественное-объявление-переменных"><a class="header" href="#Множественное-объявление-переменных">Множественное объявление переменных</a></h2>
+<p>Go также поддерживает множественное объявление переменных в одной строке:</p>
+<pre><code class="language-go">var x, y, z int
+</code></pre>
+<p>Или даже присвоение значений сразу нескольким переменным:</p>
+<pre><code class="language-go">var a, b = 10, "Hello"
+</code></pre>
+<p>Здесь переменная <strong><code>a</code></strong> получает значение <strong><code>10</code></strong> (int), а <strong><code>b</code></strong> — строку <strong>"Hello"</strong>. Это удобно, когда вам нужно создать несколько переменных с разными типами данных в одной строке.</p>
+<hr />
+<h2 id="Типы-данных-в-go"><a class="header" href="#Типы-данных-в-go">Типы данных в Go</a></h2>
+<p>Go — это язык со строгой типизацией, и все переменные имеют чётко определённый тип данных. Давайте рассмотрим основные типы, которые используются в Go:</p>
+<h3 id="1-Целые-числа-int"><a class="header" href="#1-Целые-числа-int">1. <strong>Целые числа (int)</strong></a></h3>
+<p>Целые числа в Go могут быть знаковыми и беззнаковыми. Основной тип — <strong>int</strong>, который соответствует разрядности платформы (32 или 64 бита).</p>
+<p>Пример:</p>
+<pre><code class="language-go">var age int = 25
+</code></pre>
+<p>Также есть такие типы как:</p>
+<ul>
+<li><strong>int8</strong>, <strong>int16</strong>, <strong>int32</strong>, <strong>int64</strong> — для знаковых целых чисел разного размера.</li>
+<li><strong>uint8</strong>, <strong>uint16</strong>, <strong>uint32</strong>, <strong>uint64</strong> — для беззнаковых целых чисел.</li>
+</ul>
+<h3 id="2-Вещественные-числа-float"><a class="header" href="#2-Вещественные-числа-float">2. <strong>Вещественные числа (float)</strong></a></h3>
+<p>Для работы с числами с плавающей запятой используются типы <strong>float32</strong> и <strong>float64</strong>. В большинстве случаев достаточно <strong>float64</strong> из-за его большей точности.</p>
+<p>Пример:</p>
+<pre><code class="language-go">var pi float64 = 3.14159
+</code></pre>
+<h3 id="3-Комплексные-числа-complex"><a class="header" href="#3-Комплексные-числа-complex">3. <strong>Комплексные числа (complex)</strong></a></h3>
+<p>Go поддерживает комплексные числа с типами <strong>complex64</strong> и <strong>complex128</strong>. Комплексные числа состоят из вещественной и мнимой частей.</p>
+<p>Пример:</p>
+<pre><code class="language-go">var z complex128 = 1 + 2i
+</code></pre>
+<h3 id="4-Строки-string"><a class="header" href="#4-Строки-string">4. <strong>Строки (string)</strong></a></h3>
+<p>Строки — это последовательности символов (Т.е. массив байт). В Go строки неизменяемы, а символы в строках кодируются в формате <strong>UTF-8</strong>.</p>
+<p>Пример:</p>
+<pre><code class="language-go">var greeting string = "Hello, World!"
+</code></pre>
+<h3 id="5-Булевы-значения-bool"><a class="header" href="#5-Булевы-значения-bool">5. <strong>Булевы значения (bool)</strong></a></h3>
+<p>Тип <strong>bool</strong> может принимать два значения: <strong>true</strong> или <strong>false</strong>. Используется для логических операций.</p>
+<p>Пример:</p>
+<pre><code class="language-go">var isAvailable bool = true
+</code></pre>
+<h3 id="6-Указатели"><a class="header" href="#6-Указатели">6. <strong>Указатели</strong></a></h3>
+<p>Указатели хранят адреса переменных. В Go указатели имеют тип <strong><code>*T</code></strong>, где <strong>T</strong> — это тип значения, на которое ссылается указатель.</p>
+<p>Пример:</p>
+<pre><code class="language-go">var ptr *int
+</code></pre>
+<blockquote>
+<p>Чуть позже этот тип данных мы заденем глубже</p>
+</blockquote>
+<hr />
+<h2 id="Сложные-типы-данных"><a class="header" href="#Сложные-типы-данных">Сложные типы данных</a></h2>
+<p>Кроме примитивных типов, Go поддерживает и более сложные структуры данных.</p>
+<h3 id="1-Массивы"><a class="header" href="#1-Массивы">1. <strong>Массивы</strong></a></h3>
+<p>Массивы — это фиксированные по размеру последовательности однотипных элементов.</p>
+<p>Пример:</p>
+<pre><code class="language-go">var numbers [5]int = [5]int{1, 2, 3, 4, 5}
+</code></pre>
+<h3 id="2-Срезы-slices"><a class="header" href="#2-Срезы-slices">2. <strong>Срезы (slices)</strong></a></h3>
+<p>Срезы — это динамические массивы, которые могут изменять свою длину. Это основной инструмент работы с последовательностями данных в Go.</p>
+<p>Пример:</p>
+<pre><code class="language-go">var nums []int = []int{1, 2, 3, 4, 5}
+</code></pre>
+<h3 id="3-Карты-maps"><a class="header" href="#3-Карты-maps">3. <strong>Карты (maps)</strong></a></h3>
+<p>Карты — это структуры данных типа "ключ-значение". Ключи должны быть уникальными, а значения могут быть любого типа.</p>
+<p>Пример:</p>
+<pre><code class="language-go">var dict map[string]int = map[string]int{"apple": 2, "banana": 3}
+</code></pre>
+<h3 id="4-Структуры-structs"><a class="header" href="#4-Структуры-structs">4. <strong>Структуры (structs)</strong></a></h3>
+<p>Структуры позволяют группировать переменные разных типов в одну сущность. Это аналог классов в других языках.</p>
+<p>Пример:</p>
+<pre><code class="language-go">type Person struct {
+    Name string
+    Age  int
+}
+
+var p = Person{Name: "Иван", Age: 30}
+</code></pre>
+<hr />
+<h2 id="Константы"><a class="header" href="#Константы">Константы</a></h2>
+<p>Кроме переменных, Go поддерживает <strong>константы</strong> — значения, которые нельзя изменить после их объявления. Константы создаются с помощью ключевого слова <strong><code>const</code></strong> и могут быть числами, строками, логическими значениями.</p>
+<p>Пример:</p>
+<pre><code class="language-go">const Pi = 3.14
+const Version = "1.0.0"
+</code></pre>
+<hr />
+<h2 id="Инициализация-переменных-по-умолчанию"><a class="header" href="#Инициализация-переменных-по-умолчанию">Инициализация переменных по умолчанию</a></h2>
+<p>Если вы не присвоите переменной значение при объявлении, Go автоматически инициализирует её <strong>нулевым значением</strong> для её типа. Это значит, что для <strong>int</strong> это будет <strong>0</strong>, для <strong>string</strong> — пустая строка, для <strong>bool</strong> — <strong>false</strong>, а для <strong>указателей</strong> — <strong>nil</strong>.</p>
+<p>Пример:</p>
+<pre><code class="language-go">var price int  // price = 0
+var title string  // title = ""
+var isAvailable bool  // isAvailable = false
+</code></pre>
+<hr />
+<h2 id="Подводим-итог"><a class="header" href="#Подводим-итог">Подводим итог</a></h2>
+<p>Переменные в Go и работа с типами данных — это основа, на которой строятся более сложные программы. Go делает работу с переменными и типами данных простой и интуитивной, благодаря строгой типизации и минималистичному синтаксису. Этот строгий подход помогает избежать множества ошибок и сделать код предсказуемым и эффективным.</p>
+<hr />
+<h3 id="Задания-для-закрепления"><a class="header" href="#Задания-для-закрепления">Задания для закрепления:</a></h3>
+<ol>
+<li>Объявите переменные с типами int, float, string и bool, присвойте им значения.</li>
+<li>Попробуйте создать массив из 5 элементов, а затем срез на его основе.</li>
+<li>Создайте карту с ключами типа string и значениями типа int, добавьте несколько элементов и выведите их на экран.</li>
+<li>Создайте структуру для описания книги с полями "Название", "Автор", "Цена", и создайте переменную для книги.</li>
+</ol>
+<p>Приятного изучения Go!</p>
+<hr />
+<p>Этот текст теперь более подробно рассматривает типы данных в Go и обеспечивает читателю более глубокое понимание темы.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Основные-конструкции-управления-в-go"><a class="header" href="#Основные-конструкции-управления-в-go">Основные конструкции управления в Go</a></h1>
+<p>В этом уроке мы познакомимся с базовыми управляющими конструкциями языка Go: <strong><code>if</code></strong>, <strong><code>else if</code></strong>, <strong><code>else</code></strong>, <strong><code>switch</code></strong> и <strong><code>for</code></strong>. Эти конструкции позволяют создавать логику в программе, управлять потоком выполнения и организовывать циклы.</p>
+<h2 id="Условные-операторы-if-else-if-else"><a class="header" href="#Условные-операторы-if-else-if-else">Условные операторы: <code>if</code>, <code>else if</code>, <code>else</code></a></h2>
+<p>if в Go — это оператор условного выполнения кода, который позволяет выполнять определённый блок кода, если условие истинно (то есть результат выражения — true). Это один из основных инструментов для управления потоком программы.</p>
+<h3 id="Пример-с-if-и-else"><a class="header" href="#Пример-с-if-и-else">Пример с <code>if</code> и <code>else</code>:</a></h3>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    age := 20
+    
+    if age &gt;= 18 {
+        fmt.Println("Вы совершеннолетний.")
+    } else {
+        fmt.Println("Вы несовершеннолетний.")
+    }
+}
+</code></pre>
+<p>Здесь мы проверяем значение переменной <strong><code>age</code></strong>. Если возраст больше или равен 18, программа выводит "Вы совершеннолетний", иначе — "Вы несовершеннолетний".</p>
+<h3 id="Пример-с-else-if"><a class="header" href="#Пример-с-else-if">Пример с <code>else if</code>:</a></h3>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    age := 16
+
+    if age &lt; 13 {
+        fmt.Println("Вы ребёнок.")
+    } else if age &gt;= 13 &amp;&amp; age &lt; 18 {
+        fmt.Println("Вы подросток.")
+    } else {
+        fmt.Println("Вы взрослый.")
+    }
+}
+</code></pre>
+<p>В этом примере добавлена конструкция <strong><code>else if</code></strong>, которая проверяет промежуточные условия.</p>
+<h2 id="Оператор-switch"><a class="header" href="#Оператор-switch">Оператор <code>switch</code></a></h2>
+<p>Оператор <strong><code>switch</code></strong> в Go позволяет упростить проверки, если нужно сравнить одно значение с несколькими вариантами.</p>
+<h3 id="Пример-использования-switch"><a class="header" href="#Пример-использования-switch">Пример использования <code>switch</code>:</a></h3>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    day := "понедельник"
+
+    switch day {
+    case "понедельник":
+        fmt.Println("Сегодня понедельник.")
+    case "вторник":
+        fmt.Println("Сегодня вторник.")
+    case "среда":
+        fmt.Println("Сегодня среда.")
+    default:
+        fmt.Println("Сегодня другой день.")
+    }
+}
+</code></pre>
+<p>В этом примере <strong><code>switch</code></strong> сравнивает переменную <strong><code>day</code></strong> с несколькими значениями, и при совпадении выполняет соответствующий код.</p>
+<ul>
+<li><strong><code>default</code></strong> выполняется, если ни одно из условий не подошло.</li>
+</ul>
+<h3 id="Несколько-значений-для-одного-case"><a class="header" href="#Несколько-значений-для-одного-case">Несколько значений для одного case:</a></h3>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    day := "суббота"
+
+    switch day {
+    case "суббота", "воскресенье":
+        fmt.Println("Выходной!")
+    default:
+        fmt.Println("Рабочий день.")
+    }
+}
+</code></pre>
+<p>Здесь <strong><code>case "суббота", "воскресенье"</code></strong> означает, что для любого из этих двух значений будет выполнен один и тот же код.</p>
+<h2 id="Циклы-for"><a class="header" href="#Циклы-for">Циклы: <code>for</code></a></h2>
+<p>В Go есть только один оператор цикла — <strong><code>for</code></strong>, но его можно использовать для разных типов итераций. Давайте рассмотрим несколько примеров.</p>
+<h3 id="Стандартный-цикл-for"><a class="header" href="#Стандартный-цикл-for">Стандартный цикл <code>for</code>:</a></h3>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    for i := 0; i &lt; 5; i++ {
+        fmt.Println(i)
+    }
+}
+</code></pre>
+<p>Этот цикл выводит числа от 0 до 4. Здесь:</p>
+<ul>
+<li><strong><code>i := 0</code></strong> — инициализация переменной.</li>
+<li><strong><code>i &lt; 5</code></strong> — условие, по которому цикл продолжается.</li>
+<li><strong><code>i++</code></strong> — шаг цикла, увеличивает <strong><code>i</code></strong> на 1.</li>
+</ul>
+<h3 id="Цикл-с-условием"><a class="header" href="#Цикл-с-условием">Цикл с условием:</a></h3>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    i := 0
+    for i &lt; 5 {
+        fmt.Println(i)
+        i++
+    }
+}
+</code></pre>
+<p>Этот цикл выполняется, пока <strong><code>i</code></strong> меньше 5. Это аналог цикла <strong><code>while</code></strong> в других языках.</p>
+<h3 id="Бесконечный-цикл"><a class="header" href="#Бесконечный-цикл">Бесконечный цикл:</a></h3>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    for {
+        fmt.Println("Бесконечный цикл")
+    }
+}
+</code></pre>
+<p>Цикл <strong><code>for {}</code></strong> без условий будет выполняться бесконечно. Обычно такие циклы используют с операторами <strong><code>break</code></strong> для выхода.</p>
+<h3 id="Пример-с-break-и-continue"><a class="header" href="#Пример-с-break-и-continue">Пример с <code>break</code> и <code>continue</code>:</a></h3>
+<ul>
+<li><strong><code>break</code></strong> завершает цикл досрочно.</li>
+<li><strong><code>continue</code></strong> пропускает текущую итерацию и переходит к следующей.</li>
+</ul>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    for i := 0; i &lt; 10; i++ {
+        if i == 5 {
+            break // Останавливает цикл
+        }
+        if i%2 == 0 {
+            continue // Пропускает текущую итерацию
+        }
+        fmt.Println(i)
+    }
+}
+</code></pre>
+<p>В этом примере:</p>
+<ul>
+<li>При <strong><code>i == 5</code></strong> цикл завершится из-за <strong><code>break</code></strong>.</li>
+<li>При чётных значениях <strong><code>i</code></strong> будет выполнена команда <strong><code>continue</code></strong>, пропускающая вывод.</li>
+</ul>
+<p>Оператор <strong><code>goto</code></strong> и <strong>метки</strong> в Go предоставляют низкоуровневый способ управления потоком выполнения программы. Они позволяют перемещать выполнение программы между различными частями кода, что делает логику гибче, но использование этих конструкций редко рекомендуется, так как может ухудшить читаемость кода.</p>
+<h2 id="Оператор-goto"><a class="header" href="#Оператор-goto">Оператор <code>goto</code></a></h2>
+<p><strong><code>goto</code></strong> позволяет программе перейти к определённой метке в коде. Метка — это идентификатор, за которым следует двоеточие. Как правило, использование <code>goto</code> стараются избегать, так как это усложняет логику программы, но в некоторых случаях (например, при выходе из вложенных циклов или для улучшения читаемости аварийного завершения программы) оно может быть полезным.</p>
+<h3 id="Пример-с-goto"><a class="header" href="#Пример-с-goto">Пример с <code>goto</code>:</a></h3>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    count := 0
+
+    fmt.Println("Начало программы")
+
+loop:
+    if count &lt; 3 {
+        fmt.Println("Цикл:", count)
+        count++
+        goto loop // Переход к метке loop
+    }
+
+    fmt.Println("Конец программы")
+}
+</code></pre>
+<p>В этом примере <strong><code>goto</code></strong> передаёт управление к метке <strong><code>loop</code></strong>, что позволяет повторять цикл. Программа выводит "Цикл: 0", "Цикл: 1", "Цикл: 2", а затем завершает цикл и выводит "Конец программы".</p>
+<h3 id="Когда-использовать-goto"><a class="header" href="#Когда-использовать-goto">Когда использовать <code>goto</code>:</a></h3>
+<ul>
+<li>Для упрощённого выхода из сложных вложенных конструкций.</li>
+<li>Для обработки ошибок и аварийного завершения программы (например, в функциях с множеством проверок ошибок).</li>
+</ul>
+<h2 id="Метки-для-break-и-continue"><a class="header" href="#Метки-для-break-и-continue">Метки для <code>break</code> и <code>continue</code></a></h2>
+<p>Go также поддерживает <strong>метки</strong> для операторов <strong><code>break</code></strong> и <strong><code>continue</code></strong>, которые помогают управлять выходом из вложенных циклов или переходом к следующей итерации внешнего цикла.</p>
+<h3 id="Пример-с-метками-для-break"><a class="header" href="#Пример-с-метками-для-break">Пример с метками для <code>break</code>:</a></h3>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+outerLoop:
+    for i := 0; i &lt; 3; i++ {
+        for j := 0; j &lt; 3; j++ {
+            if i == 2 &amp;&amp; j == 2 {
+                break outerLoop // Прерываем внешний цикл
+            }
+            fmt.Println(i, j)
+        }
+    }
+    fmt.Println("Вышли из обоих циклов.")
+}
+</code></pre>
+<p>Здесь метка <strong><code>outerLoop</code></strong> привязана к внешнему циклу. Когда условие <strong><code>i == 2 &amp;&amp; j == 2</code></strong> выполняется, <strong><code>break outerLoop</code></strong> прерывает внешний цикл, а не внутренний.</p>
+<h3 id="Пример-с-метками-для-continue"><a class="header" href="#Пример-с-метками-для-continue">Пример с метками для <code>continue</code>:</a></h3>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+outerLoop:
+    for i := 0; i &lt; 3; i++ {
+        for j := 0; j &lt; 3; j++ {
+            if j == 1 {
+                continue outerLoop // Переходим к следующей итерации внешнего цикла
+            }
+            fmt.Println(i, j)
+        }
+    }
+}
+</code></pre>
+<p>В этом примере <strong><code>continue outerLoop</code></strong> пропускает оставшуюся часть внутреннего цикла и немедленно переходит к следующей итерации внешнего цикла.</p>
+<h2 id="Особенности"><a class="header" href="#Особенности">Особенности:</a></h2>
+<ul>
+<li><strong><code>goto</code></strong> и метки не должны использоваться для замены более простых и понятных управляющих конструкций.</li>
+<li><strong><code>break</code></strong> и <strong><code>continue</code></strong> с метками полезны в ситуациях, когда нужно контролировать поведение нескольких вложенных циклов.</li>
+</ul>
+<blockquote>
+<p>Оператор <strong><code>goto</code></strong> и метки с <strong><code>break</code></strong> и <strong><code>continue</code></strong> могут быть полезны для сложных ситуаций с вложенными циклами, но их следует использовать с осторожностью. В большинстве случаев более читаемым решением будут стандартные управляющие конструкции, такие как <code>if</code>, <code>for</code>, и <code>switch</code>.</p>
+</blockquote>
+<p>Операторы <strong><code>goto</code></strong> и метки с <strong><code>continue</code>/<code>break</code></strong> в Go имеют схожую функциональность в том, что они позволяют контролировать выполнение программы и перемещать управление в нужные части кода. Однако у них есть несколько ключевых отличий, связанных с тем, как и когда они могут использоваться.</p>
+<h3 id="1-Назначение-и-использование"><a class="header" href="#1-Назначение-и-использование">1. <strong>Назначение и использование</strong></a></h3>
+<ul>
+<li>
+<p><strong><code>goto</code></strong>:</p>
+<ul>
+<li>Основное предназначение <strong><code>goto</code></strong> — это передача управления к произвольной метке в коде.</li>
+<li>Оно позволяет перемещаться не только в пределах циклов, но и между любыми блоками кода в функции.</li>
+<li><strong><code>goto</code></strong> может перемещать выполнение вперёд и назад по коду, что делает его более гибким, но также может ухудшать читаемость программы.</li>
+</ul>
+<p>Пример с <strong><code>goto</code></strong>:</p>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    count := 0
+
+start:
+    fmt.Println("Счёт:", count)
+    count++
+    if count &lt; 3 {
+        goto start // Переход к метке start
+    }
+    fmt.Println("Конец")
+}
+</code></pre>
+<p>Здесь <strong><code>goto</code></strong> позволяет выполнять код от метки <code>start</code> повторно.</p>
+</li>
+<li>
+<p><strong><code>continue</code>/<code>break</code> с меткой</strong>:</p>
+<ul>
+<li>Метки с <strong><code>continue</code></strong> и <strong><code>break</code></strong> предназначены для управления циклами, особенно вложенными. С их помощью можно прервать или пропустить итерации внешнего цикла.</li>
+<li><strong><code>continue</code></strong> с меткой возвращает управление к следующей итерации метки цикла, а <strong><code>break</code></strong> с меткой завершает выполнение обозначенного цикла.</li>
+</ul>
+<p>Пример с <strong><code>break</code></strong> с меткой:</p>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+outerLoop:
+    for i := 0; i &lt; 3; i++ {
+        for j := 0; j &lt; 3; j++ {
+            if i == 1 &amp;&amp; j == 2 {
+                break outerLoop // Прерывание внешнего цикла
+            }
+            fmt.Println(i, j)
+        }
+    }
+    fmt.Println("Конец")
+}
+</code></pre>
+<p>В этом примере <strong><code>break outerLoop</code></strong> прерывает выполнение внешнего цикла.</p>
+</li>
+</ul>
+<h3 id="2-Контекст-использования"><a class="header" href="#2-Контекст-использования">2. <strong>Контекст использования</strong></a></h3>
+<ul>
+<li>
+<p><strong><code>goto</code></strong> может использоваться в любом месте внутри функции, как для перехода вперёд, так и назад по коду. Он не ограничен циклами.</p>
+</li>
+<li>
+<p><strong><code>break</code></strong> и <strong><code>continue</code></strong> с меткой работают <strong>только в контексте циклов</strong>. Они позволяют управлять выходом из одного или нескольких циклов или переходом к следующей итерации внешнего цикла.</p>
+</li>
+</ul>
+<h3 id="3-Читаемость-и-структура-кода"><a class="header" href="#3-Читаемость-и-структура-кода">3. <strong>Читаемость и структура кода</strong></a></h3>
+<ul>
+<li>
+<p><strong><code>goto</code></strong>:</p>
+<ul>
+<li>Может создавать "нелинейный" код, что снижает его читаемость.</li>
+<li>Если используется неосторожно, может запутать логику программы (появляются "прыжки" в коде).</li>
+<li>Однако полезен для обработки ошибок или выхода из глубоко вложенных конструкций.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>continue</code>/<code>break</code> с меткой</strong>:</p>
+<ul>
+<li>Более структурированный способ управления циклами.</li>
+<li>Применяется для управления потоками в циклах, что делает код более читаемым и предсказуемым в таких сценариях.</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-Семантика-выполнения"><a class="header" href="#4-Семантика-выполнения">4. <strong>Семантика выполнения</strong></a></h3>
+<ul>
+<li><strong><code>goto</code></strong> немедленно передаёт управление к указанной метке, обходя все последующие инструкции до метки.</li>
+<li><strong><code>break</code></strong> с меткой завершает выполнение цикла, к которому привязана метка.</li>
+<li><strong><code>continue</code></strong> с меткой завершает текущую итерацию и немедленно возвращает управление на начало указанного цикла.</li>
+</ul>
+<h3 id="Итоговые-различия"><a class="header" href="#Итоговые-различия">Итоговые различия:</a></h3>
+<ul>
+<li>
+<p><strong><code>goto</code></strong> — это более универсальный оператор, который может переносить выполнение программы в любое место в рамках функции, но может снижать читаемость и усложнять логику.</p>
+</li>
+<li>
+<p><strong><code>continue</code>/<code>break</code> с меткой</strong> — это инструменты для работы с циклами, которые помогают управлять потоком вложенных циклов, сохраняя при этом более понятную и структурированную логику программы.</p>
+</li>
+</ul>
+<h2 id="Заключение"><a class="header" href="#Заключение">Заключение</a></h2>
+<p>Мы рассмотрели основные управляющие конструкции Go: <strong><code>if/else</code></strong>, <strong><code>switch</code></strong>, <strong>goto</strong>, метки для <strong>break/continue</strong> и различные виды циклов с <strong><code>for</code></strong>. Это фундаментальные элементы, которые позволяют создавать логику и управлять выполнением программы.</p>
+<hr />
+<h2 id="Задания-для-for"><a class="header" href="#Задания-для-for">Задания для <strong><code>for</code></strong>:</a></h2>
+<h3 id="Задание-1-Вывод-чисел"><a class="header" href="#Задание-1-Вывод-чисел">Задание 1: Вывод чисел</a></h3>
+<p>Напишите программу, которая с помощью цикла <strong><code>for</code></strong> выводит числа от 1 до 10.</p>
+<h3 id="Пример-вывода"><a class="header" href="#Пример-вывода">Пример вывода:</a></h3>
+<pre><code>1
+2
+3
+...
+10
+</code></pre>
+<h3 id="Задание-2-Сумма-чисел"><a class="header" href="#Задание-2-Сумма-чисел">Задание 2: Сумма чисел</a></h3>
+<p>Используя цикл <strong><code>for</code></strong>, напишите программу, которая вычисляет и выводит сумму чисел от 1 до 100.</p>
+<h3 id="Пример-вывода-1"><a class="header" href="#Пример-вывода-1">Пример вывода:</a></h3>
+<pre><code>Сумма чисел от 1 до 100: 5050
+</code></pre>
+<h3 id="Задание-3-Бесконечный-цикл"><a class="header" href="#Задание-3-Бесконечный-цикл">Задание 3: Бесконечный цикл</a></h3>
+<p>Создайте бесконечный цикл с <strong><code>for</code></strong>, который выводит случайные числа от 1 до 100. Прекратите выполнение программы, если число окажется больше 90.</p>
+<h3 id="Пример-вывода-2"><a class="header" href="#Пример-вывода-2">Пример вывода:</a></h3>
+<pre><code>32
+47
+...
+93
+Цикл завершён.
+</code></pre>
+<h3 id="Задание-4-Таблица-умножения"><a class="header" href="#Задание-4-Таблица-умножения">Задание 4: Таблица умножения</a></h3>
+<p>Напишите программу, которая с помощью вложенного цикла <strong><code>for</code></strong> выводит таблицу умножения от 1 до 9.</p>
+<h3 id="Пример-вывода-3"><a class="header" href="#Пример-вывода-3">Пример вывода:</a></h3>
+<pre><code>1 * 1 = 1
+1 * 2 = 2
+...
+9 * 9 = 81
+</code></pre>
+<hr />
+<h2 id="Задания-для-if"><a class="header" href="#Задания-для-if">Задания для <strong><code>if</code></strong>:</a></h2>
+<h3 id="Задание-1-Чётное-или-нечётное"><a class="header" href="#Задание-1-Чётное-или-нечётное">Задание 1: Чётное или нечётное</a></h3>
+<p>Напишите программу, которая с помощью <strong><code>if</code></strong> проверяет, является ли введённое число чётным или нечётным, и выводит соответствующее сообщение.</p>
+<h3 id="Пример"><a class="header" href="#Пример">Пример:</a></h3>
+<pre><code class="language-go">Введите число: 7
+</code></pre>
+<h3 id="Пример-вывода-4"><a class="header" href="#Пример-вывода-4">Пример вывода:</a></h3>
+<pre><code>Число 7 нечётное.
+</code></pre>
+<blockquote>
+<p>Для заданий с if вы можете использовать fmt.Scan() или обычные переменные</p>
+</blockquote>
+<h3 id="Задание-2-Проверка-возраста"><a class="header" href="#Задание-2-Проверка-возраста">Задание 2: Проверка возраста</a></h3>
+<p>Напишите программу, которая спрашивает у пользователя его возраст. Если возраст меньше 18, программа должна выводить сообщение, что доступ к контенту ограничен. Если 18 и больше — доступ разрешён.</p>
+<h3 id="Пример-1"><a class="header" href="#Пример-1">Пример:</a></h3>
+<pre><code class="language-go">Введите возраст: 17
+</code></pre>
+<h3 id="Пример-вывода-5"><a class="header" href="#Пример-вывода-5">Пример вывода:</a></h3>
+<pre><code>Доступ запрещён.
+</code></pre>
+<h3 id="Задание-3-Определение-максимального-числа"><a class="header" href="#Задание-3-Определение-максимального-числа">Задание 3: Определение максимального числа</a></h3>
+<p>Напишите программу, которая принимает три числа от пользователя и выводит максимальное из них, используя вложенные операторы <strong><code>if</code></strong>.</p>
+<h3 id="Пример-2"><a class="header" href="#Пример-2">Пример:</a></h3>
+<pre><code class="language-go">Введите три числа: 5, 12, 9
+</code></pre>
+<h3 id="Пример-вывода-6"><a class="header" href="#Пример-вывода-6">Пример вывода:</a></h3>
+<pre><code>Максимальное число: 12
+</code></pre>
+<h3 id="Задание-4-Простая-авторизация"><a class="header" href="#Задание-4-Простая-авторизация">Задание 4: Простая авторизация</a></h3>
+<p>Напишите программу, которая проверяет введённый пользователем логин и пароль. Если логин — "admin", а пароль — "1234", программа должна вывести "Добро пожаловать!", в противном случае — "Неверный логин или пароль".</p>
+<h3 id="Пример-3"><a class="header" href="#Пример-3">Пример:</a></h3>
+<pre><code class="language-go">Введите логин: admin
+Введите пароль: 1234
+</code></pre>
+<h3 id="Пример-вывода-7"><a class="header" href="#Пример-вывода-7">Пример вывода:</a></h3>
+<pre><code>Добро пожаловать!
+</code></pre>
+<hr />
+<h2 id="Задания-для-switch"><a class="header" href="#Задания-для-switch">Задания для <strong><code>switch</code></strong>:</a></h2>
+<h3 id="Задание-1-Определение-дня-недели"><a class="header" href="#Задание-1-Определение-дня-недели">Задание 1: Определение дня недели</a></h3>
+<p>Напишите программу, которая с помощью <strong><code>switch</code></strong> принимает от пользователя число от 1 до 7 и выводит название дня недели (1 — Понедельник, 2 — Вторник и т.д.).</p>
+<h3 id="Пример-4"><a class="header" href="#Пример-4">Пример:</a></h3>
+<pre><code class="language-go">Введите число: 3
+</code></pre>
+<h3 id="Пример-вывода-8"><a class="header" href="#Пример-вывода-8">Пример вывода:</a></h3>
+<pre><code>Среда
+</code></pre>
+<h3 id="Задание-2-Калькулятор"><a class="header" href="#Задание-2-Калькулятор">Задание 2: Калькулятор</a></h3>
+<p>Напишите простую программу-калькулятор, которая спрашивает у пользователя два числа и оператор (+, -, *, /). В зависимости от введённого оператора, программа должна выполнить соответствующую операцию с числами, используя <strong><code>switch</code></strong>.</p>
+<h3 id="Пример-5"><a class="header" href="#Пример-5">Пример:</a></h3>
+<pre><code class="language-go">Введите первое число: 8
+Введите оператор: +
+Введите второе число: 5
+</code></pre>
+<h3 id="Пример-вывода-9"><a class="header" href="#Пример-вывода-9">Пример вывода:</a></h3>
+<pre><code>8 + 5 = 13
+</code></pre>
+<h3 id="Задание-3-Определение-времени-суток"><a class="header" href="#Задание-3-Определение-времени-суток">Задание 3: Определение времени суток</a></h3>
+<p>Напишите программу, которая принимает от пользователя текущее время в часах (например, 14 для 14:00) и выводит, какое это время суток — утро, день, вечер или ночь — используя <strong><code>switch</code></strong>.</p>
+<h3 id="Пример-6"><a class="header" href="#Пример-6">Пример:</a></h3>
+<pre><code class="language-go">Введите текущий час: 18
+</code></pre>
+<h3 id="Пример-вывода-10"><a class="header" href="#Пример-вывода-10">Пример вывода:</a></h3>
+<pre><code>Это вечер.
+</code></pre>
+<hr />
+<h2 id="Задания-с-goto"><a class="header" href="#Задания-с-goto">Задания с <strong><code>goto</code></strong>:</a></h2>
+<h3 id="Задание-1-Простая-петля"><a class="header" href="#Задание-1-Простая-петля">Задание 1: Простая петля</a></h3>
+<p>Напишите программу, которая будет выводить числа от 1 до 10 с помощью оператора <strong><code>goto</code></strong>. После вывода числа 5, программа должна перейти к метке и завершить выполнение.</p>
+<h3 id="Пример-вывода-11"><a class="header" href="#Пример-вывода-11">Пример вывода:</a></h3>
+<pre><code>1
+2
+3
+4
+5
+Программа завершена.
+</code></pre>
+<h3 id="Задание-2-Обработка-ошибок-с-goto"><a class="header" href="#Задание-2-Обработка-ошибок-с-goto">Задание 2: Обработка ошибок с <code>goto</code></a></h3>
+<p>Напишите программу, которая пытается выполнить деление двух чисел. Если второе число равно нулю, программа должна перейти к метке для обработки ошибки и вывести сообщение о недопустимой операции деления на ноль.</p>
+<h3 id="Пример-7"><a class="header" href="#Пример-7">Пример:</a></h3>
+<pre><code class="language-go">var a, b int
+a = 10
+b = 0
+</code></pre>
+<h3 id="Пример-вывода-12"><a class="header" href="#Пример-вывода-12">Пример вывода:</a></h3>
+<pre><code>Ошибка: деление на ноль.
+</code></pre>
+<h3 id="Задание-3-Вложенные-условия"><a class="header" href="#Задание-3-Вложенные-условия">Задание 3: Вложенные условия</a></h3>
+<p>Используйте <strong><code>goto</code></strong> для реализации цикла, который будет увеличивать число от 0 до 20. Когда число кратно 7, выполните переход к метке, которая завершает цикл.</p>
+<h3 id="Пример-вывода-13"><a class="header" href="#Пример-вывода-13">Пример вывода:</a></h3>
+<pre><code>0
+1
+2
+...
+6
+Цикл завершён.
+</code></pre>
+<hr />
+<h2 id="Задания-с-breakcontinue-с-метками"><a class="header" href="#Задания-с-breakcontinue-с-метками">Задания с <strong><code>break/continue</code></strong> с метками:</a></h2>
+<h3 id="Задание-1-Прерывание-внешнего-цикла"><a class="header" href="#Задание-1-Прерывание-внешнего-цикла">Задание 1: Прерывание внешнего цикла</a></h3>
+<p>Напишите программу, в которой есть два вложенных цикла <strong><code>for</code></strong>. Программа должна выводить значения переменных обоих циклов. Когда сумма переменных внутреннего и внешнего циклов равна 5, программа должна прервать выполнение внешнего цикла с помощью <strong><code>break</code></strong> с меткой.</p>
+<h3 id="Пример-вывода-14"><a class="header" href="#Пример-вывода-14">Пример вывода:</a></h3>
+<pre><code>0 0
+0 1
+0 2
+1 0
+1 1
+1 2
+Программа завершена.
+</code></pre>
+<h3 id="Задание-2-Пропуск-итераций"><a class="header" href="#Задание-2-Пропуск-итераций">Задание 2: Пропуск итераций</a></h3>
+<p>Создайте программу с двумя вложенными циклами. Внутренний цикл должен перебирать числа от 0 до 5, а внешний — от 0 до 2. Используйте <strong><code>continue</code></strong> с меткой, чтобы пропустить внешнюю итерацию цикла, если переменная внутреннего цикла равна 3.</p>
+<h3 id="Пример-вывода-15"><a class="header" href="#Пример-вывода-15">Пример вывода:</a></h3>
+<pre><code>0 0
+0 1
+0 2
+1 0
+1 1
+1 2
+2 0
+2 1
+2 2
+</code></pre>
+<h3 id="Задание-3-Прерывание-и-продолжение-в-зависимости-от-условия"><a class="header" href="#Задание-3-Прерывание-и-продолжение-в-зависимости-от-условия">Задание 3: Прерывание и продолжение в зависимости от условия</a></h3>
+<p>Напишите программу, которая выводит все числа от 0 до 10. Если число чётное — продолжите выполнение внешнего цикла с помощью <strong><code>continue</code></strong> с меткой, если нечётное — завершите выполнение программы, используя <strong><code>break</code></strong> с меткой.</p>
+<h3 id="Пример-вывода-16"><a class="header" href="#Пример-вывода-16">Пример вывода:</a></h3>
+<pre><code>Число: 1
+Программа завершена.
+</code></pre>
+<h3 id="Задание-4-Таблица-умножения-с-выходом"><a class="header" href="#Задание-4-Таблица-умножения-с-выходом">Задание 4: Таблица умножения с выходом</a></h3>
+<p>Напишите программу, которая выводит таблицу умножения от 1 до 9. Если результат умножения равен 36, программа должна прервать оба цикла с помощью <strong><code>break</code></strong> с меткой.</p>
+<h3 id="Пример-вывода-17"><a class="header" href="#Пример-вывода-17">Пример вывода:</a></h3>
+<pre><code>1 * 1 = 1
+1 * 2 = 2
+...
+6 * 6 = 36
+Цикл прерван.
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="slice-map-и-их-особенности"><a class="header" href="#slice-map-и-их-особенности">Slice, map и их особенности</a></h1>
+<p>В этом уроке мы познакомимся с двумя важными структурами данных в Go — <strong>slice</strong> и <strong>map</strong>. Оба инструмента широко используются в повседневной разработке и предоставляют гибкие возможности для работы с коллекциями данных.</p>
+<h3 id="slice-Срезы-в-go"><a class="header" href="#slice-Срезы-в-go">Slice: Срезы в Go</a></h3>
+<p><strong>Slice</strong> — это динамическая структура данных, которая представляет собой часть (срез) массива. В отличие от массивов, срезы не фиксированы по размеру, и их можно увеличивать или уменьшать по мере необходимости.</p>
+<h4 id="Создание-и-использование-slice"><a class="header" href="#Создание-и-использование-slice">Создание и использование Slice</a></h4>
+<p>Срезы можно создать разными способами:</p>
+<ol>
+<li>
+<p><strong>От массива</strong>:</p>
+<pre><code class="language-go">arr := [5]int{1, 2, 3, 4, 5}
+slice := arr[1:4] // Срез с элементами 2, 3, 4
+</code></pre>
+</li>
+<li>
+<p><strong>С помощью функции <code>make</code></strong>:</p>
+<pre><code class="language-go">slice := make([]int, 3) // Создаем срез длиной 3 и нулевыми значениями
+</code></pre>
+</li>
+<li>
+<p><strong>Литералы срезов</strong>:</p>
+<pre><code class="language-go">slice := []int{1, 2, 3, 4, 5} // Создаем срез из пяти элементов
+</code></pre>
+</li>
+</ol>
+<h4 id="Работа-с-срезами"><a class="header" href="#Работа-с-срезами">Работа с срезами</a></h4>
+<p>Срезы имеют следующие важные свойства:</p>
+<ul>
+<li><strong>Длина (len)</strong>: Количество элементов в срезе.</li>
+<li><strong>Ёмкость (cap)</strong>: Количество элементов, которые могут быть помещены в срез до необходимости расширения.</li>
+</ul>
+<p>Пример работы с длиной и ёмкостью:</p>
+<pre><code class="language-go">slice := []int{1, 2, 3, 4, 5}
+fmt.Println(len(slice)) // 5
+fmt.Println(cap(slice)) // 5
+</code></pre>
+<p>Чтобы добавить элементы в срез, используется функция <strong><code>append</code></strong>:</p>
+<pre><code class="language-go">slice = append(slice, 6)
+fmt.Println(slice) // [1, 2, 3, 4, 5, 6]
+</code></pre>
+<blockquote>
+<p>Когда срез выходит за границы своей начальной ёмкости, Go автоматически расширяет его, удваивая ёмкость.</p>
+</blockquote>
+<p>Чтобы удалить последний элемент из среза мы тоже используем <strong><code>append</code></strong>:</p>
+<pre><code class="language-go">func main(){
+   slice := []int{1,2,3,4}
+   s := 2 // Мы хотим удалить 2 элемент
+   slice = append(slice[:s], slice[s+1:]...)
+   fmt.Println(slice) // [1, 2, 4]
+}
+</code></pre>
+<h4 id="Особенности-slice"><a class="header" href="#Особенности-slice">Особенности Slice:</a></h4>
+<ol>
+<li>
+<p><strong>Срезы ссылаются на тот же массив</strong>: Срезы "под капотом" являются ссылками на массив. Это значит, что изменение среза может изменить исходный массив.</p>
+<pre><code class="language-go">arr := [5]int{1, 2, 3, 4, 5}
+slice := arr[1:4]
+slice[0] = 10 // Изменим первый элемент среза
+fmt.Println(arr) // [1, 10, 3, 4, 5]
+</code></pre>
+</li>
+<li>
+<p><strong>Срезы могут быть нулевыми</strong>: Если срез не был инициализирован, его значение — <code>nil</code>, и длина такого среза равна нулю.</p>
+<pre><code class="language-go">var slice []int
+fmt.Println(slice == nil) // true
+</code></pre>
+</li>
+<li>
+<p><strong>Копирование срезов</strong>: Для копирования элементов одного среза в другой можно использовать функцию <strong><code>copy</code></strong>.</p>
+<pre><code class="language-go">slice1 := []int{1, 2, 3}
+slice2 := make([]int, len(slice1))
+copy(slice2, slice1)
+fmt.Println(slice2) // [1, 2, 3]
+</code></pre>
+</li>
+</ol>
+<br>
+<hr />
+<h2 id="map-Отображения-в-go"><a class="header" href="#map-Отображения-в-go">Map: Отображения в Go</a></h2>
+<p><strong>Map</strong> — это структура данных, которая представляет собой коллекцию пар "ключ-значение". Ключи должны быть уникальными, и каждое значение связано с определённым ключом.</p>
+<h4 id="Создание-и-использование-map"><a class="header" href="#Создание-и-использование-map">Создание и использование Map</a></h4>
+<p>Создать карту можно несколькими способами:</p>
+<ol>
+<li>
+<p><strong>С помощью функции <code>make</code></strong>:</p>
+<pre><code class="language-go">m := make(map[string]int) // Создаем карту с ключами типа string и значениями типа int
+</code></pre>
+</li>
+<li>
+<p><strong>Литерал карты</strong>:</p>
+<pre><code class="language-go">m := map[string]int{
+    "apple":  2,
+    "banana": 3,
+}
+</code></pre>
+</li>
+</ol>
+<h4 id="Работа-с-map"><a class="header" href="#Работа-с-map">Работа с map</a></h4>
+<p>Карта работает с операциями добавления, обновления, удаления и поиска значений:</p>
+<ol>
+<li>
+<p><strong>Добавление и обновление значений</strong>:</p>
+<pre><code class="language-go">m := make(map[string]int)
+m["apple"] = 5 // Добавляем пару "ключ-значение"
+m["apple"] = 10 // Обновляем значение для ключа "apple"
+</code></pre>
+</li>
+<li>
+<p><strong>Получение значения по ключу</strong>:</p>
+<pre><code class="language-go">value := m["apple"]
+fmt.Println(value) // 10
+</code></pre>
+</li>
+<li>
+<p><strong>Проверка наличия ключа</strong>:
+При получении значения по ключу можно также проверить, существует ли данный ключ в карте:</p>
+<pre><code class="language-go">value, ok := m["banana"]
+if ok {
+    fmt.Println("Ключ найден, значение:", value)
+} else {
+    fmt.Println("Ключ не найден")
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Удаление элемента</strong>:
+Используйте функцию <strong><code>delete</code></strong>, чтобы удалить элемент из карты:</p>
+<pre><code class="language-go">delete(m, "apple")
+fmt.Println(m) // Карта больше не содержит ключ "apple"
+</code></pre>
+</li>
+</ol>
+<h4 id="Особенности-map"><a class="header" href="#Особенности-map">Особенности Map:</a></h4>
+<ol>
+<li>
+<p><strong>Порядок элементов не гарантируется</strong>: В <strong>map</strong> элементы не упорядочены, и при каждой итерации по карте порядок может отличаться.</p>
+<pre><code class="language-go">m := map[string]int{"apple": 2, "banana": 3}
+for key, value := range m {
+    fmt.Println(key, value)
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Ключи могут быть только сравниваемыми типами</strong>: Это означает, что такие типы как срезы нельзя использовать в качестве ключей, но строки, числа и даже структуры — можно. Разрешённые типы ключей: bool, int, float, string, pointer, channel, interface, struct (если все типы полей можно сравнить), массивы (если тип данных можно сравнить) т.е. типы которые поддерживают сравнение.</p>
+</li>
+<li>
+<p><strong>Нулевые значения</strong>: При попытке доступа к несуществующему ключу карта вернёт нулевое значение для типа данных (например, <code>0</code> для int, <code>""</code> для string).</p>
+<pre><code class="language-go">m := make(map[string]int)
+fmt.Println(m["unknown"]) // 0
+</code></pre>
+</li>
+<li>
+<p><strong>Инициализация с нулевым значением</strong>: Как и срезы, карты могут быть нулевыми (<code>nil</code>), если они не инициализированы.</p>
+<pre><code class="language-go">var m map[string]int
+fmt.Println(m == nil) // true
+</code></pre>
+</li>
+</ol>
+<h2 id="Фишки-работы-с-map"><a class="header" href="#Фишки-работы-с-map">Фишки работы с map</a></h2>
+<h3 id="maptypestruct"><a class="header" href="#maptypestruct">map[Type]struct</a></h3>
+<p>Указание struct{} в качестве значения для уменьшения объёма мапы. Например, если вам нужно сделать простую проверку, существует ли какое-то значение в мапе и для этого вы хотите создать мапу <strong><code>map[string]bool</code></strong>, то это не лучший вариант. В Go т.к. мы можем ставить ещё и структуры в мапу, то лучше было бы сделать такой пример <strong><code>map[string]struct{}</code></strong> т.к. пустая структура ничего не весит в отличии от типа bool.</p>
+<pre><code class="language-go">aqua = make(map[string]struct{}, 0)
+aqua["hello"] = struct{}{} 
+</code></pre>
+<h3 id="map-в-алгоритмах"><a class="header" href="#map-в-алгоритмах">Map в алгоритмах</a></h3>
+<p>Использование типа map для различных алгоритмов. Т.к. по map поиск будет константный (Не учитываем коллизии), то данный тип часто используется для написания алгоритмов разной сложности. Например:</p>
+<p><strong>Two sum (LeetCode)</strong> : Учитывая массив целых чисел nums и целое число target, нужно вернуть индексы двух чисел так, чтобы их сумма составляла target.  Вы можете попробовать сделать так, что каждый вход будет иметь ровно одно решение, и вы не можете использовать один и тот же элемент дважды.  Вы можете вернуть ответ в любом порядке.</p>
+<p>Пример 1: <br>
+input:  числа = [2,7,11,15] <br>
+target = 9 <br>
+output:  [0,1] <br></p>
+<p><em><strong>Объяснение:  Поскольку nums[0] + nums[1] == 9, мы возвращаем [0, 1]</strong></em></p>
+<p>Пример 2: <br>
+input: nums = [3,2,4] <br>
+target = 6 <br>
+output:  [1,2] <br></p>
+<p>Пример 3: <br>
+input: nums = [3,3]
+target = 6 <br>
+output:  [0,1]</p>
+<h4 id="Решение"><a class="header" href="#Решение">Решение</a></h4>
+<pre><code class="language-go">func twoSum(nums []int, target int) []int {
+    numMap := make(map[int]int)
+
+    for k, num := range nums {
+        comp := target - num 
+
+        if field, ok := numMap[comp]; ok {
+            return []int{k, field}
+        }
+        
+        numMap[num] = k 
+    }
+
+    return []int{}
+}
+
+</code></pre>
+<hr />
+<h2 id="Задания-для-работы-со-слайсами"><a class="header" href="#Задания-для-работы-со-слайсами">Задания для работы со слайсами</a></h2>
+<h3 id="Задание-1-Увеличение-слайса"><a class="header" href="#Задание-1-Увеличение-слайса">Задание 1: Увеличение слайса</a></h3>
+<p>Создайте функцию, которая принимает слайс чисел и добавляет к каждому элементу слайса число, равное его индексу. Функция должна возвращать новый слайс.</p>
+<p><strong>Пример:</strong></p>
+<pre><code class="language-go">input := []int{1, 2, 3, 4}
+output := AddIndexToElements(input) // Ожидается: [1, 3, 5, 7]
+</code></pre>
+<h3 id="Задание-2-Фильтрация-слайса"><a class="header" href="#Задание-2-Фильтрация-слайса">Задание 2: Фильтрация слайса</a></h3>
+<p>Напишите функцию, которая принимает слайс строк и возвращает новый слайс, в который попадают только строки длиной больше 3 символов.</p>
+<p><strong>Пример:</strong></p>
+<pre><code class="language-go">input := []string{"go", "slice", "map", "func"}
+output := FilterLongStrings(input) // Ожидается: ["slice", "func"]
+</code></pre>
+<h3 id="Задание-3-Удаление-элемента-из-слайса"><a class="header" href="#Задание-3-Удаление-элемента-из-слайса">Задание 3: Удаление элемента из слайса</a></h3>
+<p>Напишите функцию, которая удаляет элемент с определённым индексом из слайса целых чисел и возвращает новый слайс.</p>
+<p><strong>Пример:</strong></p>
+<pre><code class="language-go">input := []int{10, 20, 30, 40, 50}
+output := RemoveElement(input, 2) // Ожидается: [10, 20, 40, 50]
+</code></pre>
+<h3 id="Задание-4-Объединение-слайсов"><a class="header" href="#Задание-4-Объединение-слайсов">Задание 4: Объединение слайсов</a></h3>
+<p>Напишите функцию, которая принимает два слайса и возвращает новый слайс, содержащий элементы обоих слайсов (конкатенация).</p>
+<p><strong>Пример:</strong></p>
+<pre><code class="language-go">slice1 := []int{1, 2, 3}
+slice2 := []int{4, 5, 6}
+result := ConcatSlices(slice1, slice2) // Ожидается: [1, 2, 3, 4, 5, 6]
+</code></pre>
+<h3 id="Усложнённое-задание-Сортировка-слайса"><a class="header" href="#Усложнённое-задание-Сортировка-слайса">Усложнённое задание: Сортировка слайса</a></h3>
+<p>Напишите программу, которая сортирует слайс целых чисел по возрастанию без использования встроенных функций сортировки (sort.Slice и т.п.).</p>
+<h2 id="Задания-для-работы-с-мапами"><a class="header" href="#Задания-для-работы-с-мапами">Задания для работы с мапами</a></h2>
+<h3 id="Задание-1-Подсчёт-частоты-элементов"><a class="header" href="#Задание-1-Подсчёт-частоты-элементов">Задание 1: Подсчёт частоты элементов</a></h3>
+<p>Напишите функцию, которая принимает слайс строк и возвращает мапу, где ключами являются строки, а значениями — количество их повторений в слайсе.</p>
+<p><strong>Пример:</strong></p>
+<pre><code class="language-go">input := []string{"apple", "banana", "apple", "orange", "banana", "apple"}
+output := CountFrequencies(input) // Ожидается: {"apple": 3, "banana": 2, "orange": 1}
+</code></pre>
+<h3 id="Задание-2-Переворачивание-мапы"><a class="header" href="#Задание-2-Переворачивание-мапы">Задание 2: Переворачивание мапы</a></h3>
+<p>Создайте функцию, которая принимает мапу вида <code>map[string]int</code> и возвращает новую мапу, где ключами являются значения исходной мапы, а значениями — ключи.</p>
+<p><strong>Пример:</strong></p>
+<pre><code class="language-go">input := map[string]int{"one": 1, "two": 2, "three": 3}
+output := ReverseMap(input) // Ожидается: {1: "one", 2: "two", 3: "three"}
+</code></pre>
+<h3 id="Задание-3-Объединение-мап"><a class="header" href="#Задание-3-Объединение-мап">Задание 3: Объединение мап</a></h3>
+<p>Напишите функцию, которая объединяет два мапы <code>map[string]int</code>. Если ключи совпадают, их значения должны суммироваться.</p>
+<p><strong>Пример:</strong></p>
+<pre><code class="language-go">map1 := map[string]int{"a": 1, "b": 2}
+map2 := map[string]int{"b": 3, "c": 4}
+result := MergeMaps(map1, map2) // Ожидается: {"a": 1, "b": 5, "c": 4}
+</code></pre>
+<h3 id="Задание-4-Поиск-ключа-по-значению"><a class="header" href="#Задание-4-Поиск-ключа-по-значению">Задание 4: Поиск ключа по значению</a></h3>
+<p>Напишите функцию, которая принимает мапу и значение, и возвращает ключ, которому это значение соответствует. Если ключ не найден, возвращайте пустую строку.</p>
+<p><strong>Пример:</strong></p>
+<pre><code class="language-go">input := map[string]int{"apple": 5, "banana": 10, "orange": 15}
+key := FindKeyByValue(input, 10) // Ожидается: "banana"
+</code></pre>
+<h3 id="Задание-5-Удаление-элементов"><a class="header" href="#Задание-5-Удаление-элементов">Задание 5: Удаление элементов</a></h3>
+<p>Напишите функцию, которая удаляет из мапы все элементы, чьи значения меньше определённого порога.</p>
+<p><strong>Пример:</strong></p>
+<pre><code class="language-go">input := map[string]int{"a": 1, "b": 5, "c": 10, "d": 0}
+output := RemoveLowValues(input, 3) // Ожидается: {"b": 5, "c": 10}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Горутины"><a class="header" href="#Горутины">Горутины</a></h1>
+<p>Горутины — это одна из самых мощных и популярных функций в Go. Это лёгкие потоки, которые позволяют запускать функции параллельно (Параллели́зм — это свойство систем, при котором несколько вычислений выполняются одновременно, и при этом, возможно, взаимодействуют друг с другом), делая программы более эффективными и быстрыми. Основное преимущество горутин — их простота и низкая стоимость создания по сравнению с традиционными потоками в других языках программирования.</p>
+<h2 id="Что-такое-горутина"><a class="header" href="#Что-такое-горутина">Что такое горутина?</a></h2>
+<p>Горутина — это функция, которая выполняется параллельно с другими функциями в той же программе. Чтобы запустить функцию как горутину, достаточно перед её вызовом написать ключевое слово <code>go</code>.</p>
+<h3 id="Пример-запуска-горутины"><a class="header" href="#Пример-запуска-горутины">Пример запуска горутины:</a></h3>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func printMessage(message string) {
+    fmt.Println(message)
+}
+
+func main() {
+    go printMessage("Привет от горутины!") // Запускаем функцию как горутину
+    time.Sleep(1 * time.Second)            // Даем время для завершения горутины
+    fmt.Println("Привет от main!")
+}
+</code></pre>
+<p>В этом примере функция <code>printMessage</code> выполняется как горутина. Если бы мы не использовали <code>time.Sleep()</code>, то программа завершилась бы до того, как горутина успела бы выполнить своё задание.</p>
+<h3 id="Особенности-горутин"><a class="header" href="#Особенности-горутин">Особенности горутин:</a></h3>
+<ol>
+<li><strong>Лёгкость</strong>: Создание горутин обходится значительно дешевле, чем создание системных потоков.</li>
+<li><strong>Совместимость с каналами</strong>: Для синхронизации между горутинами используются каналы, что позволяет безопасно передавать данные между ними.</li>
+<li><strong>Автоматическое управление планированием</strong>: Go-рантайм автоматически управляет планированием горутин на основе количества доступных системных потоков.</li>
+</ol>
+<h2 id="Пример-работы-с-несколькими-горутинами"><a class="header" href="#Пример-работы-с-несколькими-горутинами">Пример работы с несколькими горутинами</a></h2>
+<p>Давайте посмотрим, как можно запустить несколько горутин одновременно:</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func printNumber(number int) {
+    fmt.Printf("Число: %d\n", number)
+}
+
+func main() {
+    for i := 1; i &lt;= 5; i++ {
+        go printNumber(i) // Запуск горутин в цикле
+    }
+    time.Sleep(1 * time.Second) // Даём время для завершения всех горутин
+}
+</code></pre>
+<p>В данном примере мы запускаем несколько горутин в цикле, каждая из которых печатает своё число. Опять же, <code>time.Sleep()</code> даёт возможность горутинам завершить выполнение перед завершением программы.</p>
+<h2 id="Работа-с-анонимными-горутинами"><a class="header" href="#Работа-с-анонимными-горутинами">Работа с анонимными горутинами</a></h2>
+<p>В Go также можно создавать анонимные функции, которые выполняются как горутины:</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func main() {
+    go func() {
+        fmt.Println("Анонимная горутина")
+    }()
+    
+    time.Sleep(1 * time.Second) // Ждем завершения анонимной горутины
+}
+</code></pre>
+<p>Это полезно, когда вам нужно выполнить несложное действие параллельно, не создавая отдельную именованную функцию.</p>
+<h2 id="Синхронизация-горутин-с-помощью-waitgroup"><a class="header" href="#Синхронизация-горутин-с-помощью-waitgroup">Синхронизация горутин с помощью <code>WaitGroup</code></a></h2>
+<p>Когда у нас несколько горутин, иногда нам нужно дождаться, пока все они завершат свою работу, прежде чем программа продолжит выполнение. Для этого используется структура <code>sync.WaitGroup</code>.</p>
+<h3 id="Пример-с-использованием-waitgroup"><a class="header" href="#Пример-с-использованием-waitgroup">Пример с использованием <code>WaitGroup</code>:</a></h3>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "sync"
+)
+
+func printMessage(message string, wg *sync.WaitGroup) {
+    defer wg.Done() // Сообщаем, что горутина завершила работу
+    fmt.Println(message)
+}
+
+func main() {
+    var wg sync.WaitGroup
+
+    messages := []string{"Hello", "from", "multiple", "goroutines"}
+
+    for _, msg := range messages {
+        wg.Add(1) // Увеличиваем счётчик горутин
+        go printMessage(msg, &amp;wg)
+    }
+
+    wg.Wait() // Ожидаем завершения всех горутин
+    fmt.Println("Все горутины завершены.")
+}
+</code></pre>
+<p>В этом примере мы используем <code>sync.WaitGroup</code>, чтобы подождать, пока все горутины завершат выполнение. Каждая горутина сообщает о своём завершении с помощью метода <code>Done()</code>, а <code>wg.Wait()</code> блокирует выполнение основной функции до тех пор, пока все горутины не завершат работу.</p>
+<h2 id="Общие-ошибки-при-работе-с-горутинами"><a class="header" href="#Общие-ошибки-при-работе-с-горутинами">Общие ошибки при работе с горутинами</a></h2>
+<ol>
+<li>
+<p><strong>Преждевременное завершение программы</strong>: Основная программа может завершиться до того, как горутины успеют выполнить своё задание. Поэтому всегда важно правильно синхронизировать завершение горутин с помощью <code>WaitGroup</code> или других механизмов.</p>
+</li>
+<li>
+<p><strong>Параллельный доступ к данным</strong>: Если несколько горутин одновременно изменяют общие данные без синхронизации, это может привести к гонкам данных. Для избежания этого используйте каналы или <code>sync.Mutex</code>.</p>
+</li>
+<li>
+<p><strong>Сложности с отладкой</strong>: Ошибки, связанные с параллельным выполнением, иногда трудно отследить. Будьте внимательны при работе с горутинами и старайтесь минимизировать доступ к общим данным.</p>
+</li>
+</ol>
+<h2 id="Заключение-1"><a class="header" href="#Заключение-1">Заключение</a></h2>
+<p>Горутины — это мощный инструмент для создания высокоэффективных и параллельных программ в Go. Они просты в использовании, но требуют внимательного подхода к синхронизации и управлению общими ресурсами. Теперь, когда вы знаете основы горутин, вы можете использовать их для ускорения ваших программ и эффективного решения задач, требующих параллелизма.</p>
+<h2 id="Задания-для-практики"><a class="header" href="#Задания-для-практики">Задания для практики</a></h2>
+<ol>
+<li>
+<p>Напишите программу, которая запускает 10 горутин, каждая из которых печатает своё число. Убедитесь, что все горутины завершили выполнение перед завершением программы.</p>
+</li>
+<li>
+<p>Модифицируйте программу так, чтобы горутины передавали свои результаты в основной поток через канал, и программа выводила результат по мере завершения каждой горутины.</p>
+</li>
+<li>
+<p>Напишите программу, которая запускает несколько горутин для обработки элементов из списка, а затем собирает результаты в новый слайс.</p>
+</li>
+</ol>
+<p>Эти задания помогут вам глубже понять работу горутин и синхронизацию в Go.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Методы-синхронизации-между-горутинами"><a class="header" href="#Методы-синхронизации-между-горутинами">Методы синхронизации между горутинами</a></h1>
+<p>Когда вы начинаете работать с несколькими горутинами, часто возникает необходимость синхронизации их работы. В Go для этого существует несколько мощных инструментов, таких как <code>sync.WaitGroup</code>, <code>sync.Mutex</code>, каналы, и другие примитивы синхронизации. Этот урок поможет вам понять, как эти механизмы работают и когда их стоит использовать.</p>
+<h2 id="Темы-урока"><a class="header" href="#Темы-урока">Темы урока:</a></h2>
+<ul>
+<li><a href="chapter_1/chapter_7.html#syncwaitgroup--%D0%9E%D0%B6%D0%B8%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B3%D0%BE%D1%80%D1%83%D1%82%D0%B8%D0%BD">sync.WaitGroup</a></li>
+<li><a href="chapter_1/chapter_7.html#syncmutex--%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%BE%D1%82-%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0">sync.Mutex</a></li>
+<li><a href="chapter_1/chapter_7.html#syncrwmutex--%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%B0%D0%B2-%D0%BD%D0%B0-%D1%87%D1%82%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B8-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C">sync.RWMutex</a></li>
+<li><a href="chapter_1/chapter_7.html#%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB%D1%8B-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8">Channel</a></li>
+<li><a href="chapter_1/chapter_7.html#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-select-%D1%81-%D0%BD%D0%B5%D0%B1%D1%83%D1%84%D0%B5%D1%80%D0%B8%D0%B7%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0%D0%BC%D0%B8">select</a></li>
+<li><a href="chapter_1/chapter_7.html#syncmap--%D0%91%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%B0%D1%8F-%D0%BA%D0%B0%D1%80%D1%82%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0">sync.Map</a></li>
+<li><a href="chapter_1/chapter_7.html#synccond--%D0%A1%D0%BB%D0%BE%D0%B6%D0%BD%D1%8B%D0%B5-%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8">sync.Cond</a></li>
+</ul>
+<h1 id="syncwaitgroup--Ожидание-завершения-горутин"><a class="header" href="#syncwaitgroup--Ожидание-завершения-горутин"><strong>sync.WaitGroup</strong> — Ожидание завершения горутин</a></h1>
+<p><code>sync.WaitGroup</code> — это структура, которая помогает дождаться завершения нескольких горутин перед тем, как продолжить выполнение программы. Она содержит три основных метода:</p>
+<ul>
+<li><code>Add(int)</code> — увеличивает счётчик горутин, которые нужно ожидать.</li>
+<li><code>Done()</code> — уменьшает счётчик на единицу, указывая, что одна горутина завершила работу.</li>
+<li><code>Wait()</code> — блокирует выполнение основной программы, пока счётчик не станет равен нулю.</li>
+</ul>
+<p><strong>Пример использования:</strong></p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "sync"
+    "time"
+)
+
+func worker(id int, wg *sync.WaitGroup) {
+    defer wg.Done() // Уменьшает счётчик по завершению работы
+    fmt.Printf("Worker %d начинает работу\n", id)
+    time.Sleep(time.Second)
+    fmt.Printf("Worker %d завершил работу\n", id)
+}
+
+func main() {
+    var wg sync.WaitGroup
+    for i := 1; i &lt;= 5; i++ {
+        wg.Add(1) // Увеличиваем счётчик для каждой горутины
+        go worker(i, &amp;wg)
+    }
+
+    wg.Wait() // Ждём завершения всех горутин
+    fmt.Println("Все горутины завершены")
+}
+</code></pre>
+<blockquote>
+<p><strong>Когда использовать</strong>: <code>sync.WaitGroup</code> полезен, когда нужно дождаться завершения нескольких горутин и продолжить выполнение программы.</p>
+</blockquote>
+<h1 id="syncmutex--Защита-данных-от-конкурентного-доступа"><a class="header" href="#syncmutex--Защита-данных-от-конкурентного-доступа"><strong>sync.Mutex</strong> — Защита данных от конкурентного доступа</a></h1>
+<p><code>sync.Mutex</code> (mutual exclusion) используется для защиты общих данных, к которым одновременно обращаются несколько горутин. Это предотвращает "гонки данных", когда несколько горутин пытаются одновременно читать и изменять одни и те же переменные.</p>
+<p>Методы <code>sync.Mutex</code>:</p>
+<ul>
+<li><code>Lock()</code> — блокирует доступ к ресурсу.</li>
+<li><code>Unlock()</code> — разблокирует доступ к ресурсу.</li>
+</ul>
+<p><strong>Пример использования:</strong></p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "sync"
+)
+
+var (
+    counter int
+    mu      sync.Mutex
+)
+
+func increment(wg *sync.WaitGroup) {
+    defer wg.Done()
+    mu.Lock()   // Блокируем доступ к переменной
+    counter++   // Увеличиваем счётчик
+    mu.Unlock() // Разблокируем доступ
+}
+
+func main() {
+    var wg sync.WaitGroup
+
+    for i := 0; i &lt; 1000; i++ {
+        wg.Add(1)
+        go increment(&amp;wg)
+    }
+
+    wg.Wait()
+    fmt.Printf("Итоговый счётчик: %d\n", counter)
+}
+</code></pre>
+<blockquote>
+<p><strong>Когда использовать</strong>: <code>sync.Mutex</code> применяют, когда нужно защитить критические участки кода, которые работают с общими ресурсами (переменными, массивами, картами и т.д.).</p>
+</blockquote>
+<h1 id="syncrwmutex--Разделение-прав-на-чтение-и-запись"><a class="header" href="#syncrwmutex--Разделение-прав-на-чтение-и-запись"><strong>sync.RWMutex</strong> — Разделение прав на чтение и запись</a></h1>
+<p><code>sync.RWMutex</code> (Read-Write Mutex) похож на обычный <code>Mutex</code>, но позволяет нескольким горутинам читать данные одновременно, пока никто не производит запись. Если требуется запись, доступ к переменной блокируется для всех горутин.</p>
+<p>Основные методы:</p>
+<ul>
+<li><code>RLock()</code> — блокирует для записи, но разрешает чтение.</li>
+<li><code>RUnlock()</code> — разблокирует чтение.</li>
+<li><code>Lock()</code> — блокирует для чтения и записи.</li>
+<li><code>Unlock()</code> — разблокирует.</li>
+</ul>
+<p><strong>Пример использования:</strong></p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "sync"
+)
+
+var (
+    data = make(map[string]string)
+    mu   sync.RWMutex
+)
+
+func writeData(key, value string, wg *sync.WaitGroup) {
+    defer wg.Done()
+    mu.Lock() // Блокируем на запись
+    data[key] = value
+    mu.Unlock()
+}
+
+func readData(key string, wg *sync.WaitGroup) {
+    defer wg.Done()
+    mu.RLock() // Блокируем на чтение
+    fmt.Println("Читаем значение:", data[key])
+    mu.RUnlock()
+}
+
+func main() {
+    var wg sync.WaitGroup
+
+    wg.Add(1)
+    go writeData("language", "Go", &amp;wg)
+
+    wg.Add(1)
+    go readData("language", &amp;wg)
+
+    wg.Wait()
+}
+</code></pre>
+<blockquote>
+<p><strong>Когда использовать</strong>: <code>sync.RWMutex</code> применяют, когда нужно разделить права доступа для чтения и записи, повышая производительность в ситуациях, где чтение доминирует над записью.</p>
+</blockquote>
+<h1 id="Каналы-для-синхронизации"><a class="header" href="#Каналы-для-синхронизации"><strong>Каналы для синхронизации</strong></a></h1>
+<p>Каналы — это мощный инструмент в языке Go для организации взаимодействия между горутинами. Они позволяют безопасно передавать данные между потоками выполнения и реализовать концепцию коммуникации вместо явного использования блокировок.</p>
+<p>Каналы создаются с помощью функции <code>make</code>, и могут быть <strong>буферизированными</strong> или <strong>небуферизированными</strong>:</p>
+<pre><code class="language-go">// Создание небуферизированного канала для передачи целых чисел
+ch := make(chan int)
+
+// Создание буферизированного канала с ёмкостью 2
+chBuf := make(chan int, 2)
+</code></pre>
+<p>В небуферизированном канале операция отправки блокирует выполнение до тех пор, пока другая горутина не получит данные. Буферизированный канал позволяет отправлять несколько значений, пока не заполнится буфер.</p>
+<h3 id="Основные-операции-с-каналами"><a class="header" href="#Основные-операции-с-каналами">Основные операции с каналами</a></h3>
+<ol>
+<li>
+<p><strong>Отправка данных в канал:</strong></p>
+<pre><code class="language-go">ch &lt;- 42  // Отправка значения 42 в канал
+</code></pre>
+</li>
+<li>
+<p><strong>Чтение данных из канала:</strong></p>
+<pre><code class="language-go">value := &lt;-ch  // Чтение значения из канала
+</code></pre>
+</li>
+<li>
+<p><strong>Закрытие канала:</strong>
+Когда канал больше не будет использоваться для отправки данных, его следует закрыть, чтобы другие горутины знали, что данные больше не будут поступать.</p>
+<pre><code class="language-go">close(ch)
+</code></pre>
+<blockquote>
+<p>После закрытия канала из него всё ещё можно читать данные, но попытка отправить в закрытый канал приведёт к панике.</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Буферизированные-каналы"><a class="header" href="#Буферизированные-каналы">Буферизированные каналы</a></h2>
+<p>Буферизированные каналы позволяют отправлять несколько значений, не блокируя отправляющую горутину, пока буфер не заполнен. Получающая сторона будет блокироваться, только если буфер пуст.</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    ch := make(chan int, 2) // Буфер на 2 значения
+
+    ch &lt;- 1  // Можно отправить два значения без блокировки
+    ch &lt;- 2
+
+    fmt.Println(&lt;-ch)  // Чтение данных из канала
+    fmt.Println(&lt;-ch)
+}
+</code></pre>
+<p>Здесь буферизированный канал позволяет отправить два значения подряд без блокировки, а затем получить их.</p>
+<h2 id="Небуферезированные-каналы"><a class="header" href="#Небуферезированные-каналы">Небуферезированные каналы</a></h2>
+<p>В отличие от буферизированных каналов, небуферизированные работают синхронно: отправка данных в такой канал блокирует горутину до тех пор, пока другая горутина не примет эти данные.</p>
+<h3 id="Пример-работы-с-небуферизированным-каналом"><a class="header" href="#Пример-работы-с-небуферизированным-каналом">Пример работы с небуферизированным каналом</a></h3>
+<p>Посмотрим на пример с двумя горутинами: одна отправляет данные через канал, а другая получает их.</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    ch := make(chan int)
+
+    // Запускаем горутину для отправки данных
+    go func() {
+        fmt.Println("Отправляем данные в канал...")
+        ch &lt;- 42  // Отправляем значение 42
+        fmt.Println("Данные отправлены")
+    }()
+
+    // Читаем данные из канала
+    fmt.Println("Ожидаем данные...")
+    value := &lt;-ch
+    fmt.Println("Получено значение:", value)
+}
+</code></pre>
+<p><strong>Что здесь происходит:</strong></p>
+<ol>
+<li>Мы создаём небуферизированный канал <code>ch</code>.</li>
+<li>Запускаем горутину, которая отправляет данные в канал.</li>
+<li>Основная горутина блокируется на чтении из канала до тех пор, пока данные не будут отправлены.</li>
+<li>После этого обе горутины продолжают выполнение.</li>
+</ol>
+<h3 id="Синхронизация-через-небуферизированные-каналы"><a class="header" href="#Синхронизация-через-небуферизированные-каналы">Синхронизация через небуферизированные каналы</a></h3>
+<p>Каналы в Go используются не только для передачи данных, но и для синхронизации между горутинами. Небуферизированные каналы обеспечивают строгую синхронизацию, потому что отправка и получение должны происходить одновременно.</p>
+<h4 id="Пример-синхронизации"><a class="header" href="#Пример-синхронизации">Пример синхронизации:</a></h4>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func worker(done chan bool) {
+    fmt.Println("Работа начинается...")
+    time.Sleep(2 * time.Second) // Имитируем какую-то работу
+    fmt.Println("Работа завершена")
+    done &lt;- true  // Сообщаем, что работа завершена
+}
+
+func main() {
+    done := make(chan bool)
+
+    go worker(done)
+
+    // Ожидаем сигнал от горутины
+    &lt;-done
+    fmt.Println("Главная горутина продолжает работу")
+}
+</code></pre>
+<p><strong>Что происходит:</strong></p>
+<ol>
+<li>Горутина <code>worker</code> выполняет свою работу и через 2 секунды отправляет сигнал в канал <code>done</code>, сообщая о завершении.</li>
+<li>Главная горутина блокируется на операции чтения из канала до тех пор, пока горутина не завершит работу.</li>
+</ol>
+<h3 id="Важные-моменты-при-работе-с-небуферизированными-каналами"><a class="header" href="#Важные-моменты-при-работе-с-небуферизированными-каналами">Важные моменты при работе с небуферизированными каналами</a></h3>
+<ol>
+<li>
+<p><strong>Ожидание обеих сторон:</strong></p>
+<ul>
+<li>Если горутина пытается отправить данные в небуферизированный канал, но никто не ждёт этих данных, она заблокируется.</li>
+<li>То же самое происходит при чтении: горутина блокируется, если данные ещё не были отправлены.</li>
+</ul>
+</li>
+<li>
+<p><strong>Использование для строгой синхронизации:</strong>
+Небуферизированные каналы обеспечивают строгую синхронизацию между двумя горутинами, что полезно, когда нужно чётко контролировать выполнение. Например, когда одна горутина должна завершиться до того, как другая продолжит работу.</p>
+</li>
+<li>
+<p><strong>Потенциальные блокировки:</strong>
+Небуферизированные каналы могут привести к блокировкам, если горутины не правильно организованы. Например, если горутина ожидает получения данных, а отправляющая горутина никогда не запускается, программа заблокируется навсегда.</p>
+</li>
+</ol>
+<h3 id="Пример-с-использованием-нескольких-горутин"><a class="header" href="#Пример-с-использованием-нескольких-горутин">Пример с использованием нескольких горутин</a></h3>
+<p>В следующем примере несколько горутин отправляют значения в небуферизированный канал, а главная горутина считывает данные.</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+)
+
+func sendValue(ch chan int, value int) {
+    fmt.Printf("Отправляем %d в канал\n", value)
+    ch &lt;- value
+    fmt.Printf("%d отправлен\n", value)
+}
+
+func main() {
+    ch := make(chan int)
+
+    // Запуск нескольких горутин для отправки данных
+    go sendValue(ch, 1)
+    go sendValue(ch, 2)
+    go sendValue(ch, 3)
+
+    // Получаем данные из канала
+    fmt.Println("Получено:", &lt;-ch)
+    fmt.Println("Получено:", &lt;-ch)
+    fmt.Println("Получено:", &lt;-ch)
+}
+</code></pre>
+<p>В этом примере три горутины пытаются отправить данные в небуферизированный канал. Каждая из них будет заблокирована до тех пор, пока данные не будут прочитаны из канала в основной горутине.</p>
+<h1 id="Использование-select-с-небуферизированными-каналами"><a class="header" href="#Использование-select-с-небуферизированными-каналами">Использование <code>select</code> с небуферизированными каналами</a></h1>
+<p>Оператор <code>select</code> позволяет работать с несколькими каналами одновременно. Это полезно, когда нужно ожидать данные от разных горутин.</p>
+<h4 id="Пример-с-select"><a class="header" href="#Пример-с-select">Пример с <code>select</code>:</a></h4>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func main() {
+    ch1 := make(chan string)
+    ch2 := make(chan string)
+
+    go func() {
+        time.Sleep(1 * time.Second)
+        ch1 &lt;- "Сообщение из первого канала"
+    }()
+
+    go func() {
+        time.Sleep(2 * time.Second)
+        ch2 &lt;- "Сообщение из второго канала"
+    }()
+
+    select {
+    case msg1 := &lt;-ch1:
+        fmt.Println(msg1)
+    case msg2 := &lt;-ch2:
+        fmt.Println(msg2)
+    }
+}
+</code></pre>
+<p>В этом примере <code>select</code> ждёт сообщения из двух каналов и обрабатывает первое поступившее сообщение.</p>
+<h1 id="syncmap--Безопасная-карта-для-конкурентного-доступа"><a class="header" href="#syncmap--Безопасная-карта-для-конкурентного-доступа"><code>sync.Map</code> — Безопасная карта для конкурентного доступа</a></h1>
+<p>Go предоставляет отличные инструменты для работы с картами, но обычные карты (map) не предназначены для безопасного использования в многопоточном окружении. Если несколько горутин пытаются одновременно читать и изменять карту, может произойти гонка данных. Для таких случаев Go предлагает <code>sync.Map</code>, которая обеспечивает безопасный доступ к карте в многопоточных программах.</p>
+<p><code>sync.Map</code> отличается от обычных карт:</p>
+<ul>
+<li>Не нужно использовать <code>sync.Mutex</code> для защиты операций с картой.</li>
+<li>Поддерживает безопасный конкурентный доступ для чтения, записи и удаления данных.</li>
+<li>Методы <code>sync.Map</code> оптимизированы для сценариев с большим количеством параллельных операций.</li>
+</ul>
+<h3 id="Основные-методы-syncmap"><a class="header" href="#Основные-методы-syncmap">Основные методы <code>sync.Map</code></a></h3>
+<ul>
+<li><strong><code>Store(key, value interface{})</code></strong> — сохраняет значение по ключу.</li>
+<li><strong><code>Load(key interface{}) (value interface{}, ok bool)</code></strong> — получает значение по ключу, если оно существует.</li>
+<li><strong><code>LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)</code></strong> — пытается получить значение по ключу. Если значение отсутствует, сохраняет новое.</li>
+<li><strong><code>Delete(key interface{})</code></strong> — удаляет значение по ключу.</li>
+<li><strong><code>Range(f func(key, value interface{}) bool)</code></strong> — перебирает все элементы карты и передаёт их в функцию обратного вызова. Если функция возвращает <code>false</code>, перебор останавливается.</li>
+</ul>
+<h3 id="Пример-использования-syncmap"><a class="header" href="#Пример-использования-syncmap">Пример использования <code>sync.Map</code></a></h3>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "sync"
+)
+
+func main() {
+    var m sync.Map
+
+    // Запись значений в карту
+    m.Store("language", "Go")
+    m.Store("year", 2009)
+
+    // Чтение значения
+    value, ok := m.Load("language")
+    if ok {
+        fmt.Println("Значение ключа 'language':", value)
+    }
+
+    // Удаление значения
+    m.Delete("year")
+
+    // Попытка загрузки или сохранения
+    actual, loaded := m.LoadOrStore("platform", "Linux")
+    if loaded {
+        fmt.Println("Ключ 'platform' уже существует со значением:", actual)
+    } else {
+        fmt.Println("Ключ 'platform' отсутствовал, добавлено значение:", actual)
+    }
+
+    // Перебор всех элементов
+    m.Range(func(key, value interface{}) bool {
+        fmt.Printf("Ключ: %v, Значение: %v\n", key, value)
+        return true
+    })
+}
+</code></pre>
+<p>В данном примере:</p>
+<ul>
+<li>Мы добавляем несколько значений в карту с помощью метода <code>Store</code>.</li>
+<li>Читаем значения через <code>Load</code> и проверяем их существование.</li>
+<li>Используем метод <code>LoadOrStore</code> для проверки наличия ключа перед добавлением.</li>
+<li>Перебираем все элементы карты с помощью <code>Range</code>.</li>
+</ul>
+<h3 id="Когда-использовать-syncmap"><a class="header" href="#Когда-использовать-syncmap">Когда использовать <code>sync.Map</code></a></h3>
+<p><code>sync.Map</code> особенно полезна в ситуациях, когда:</p>
+<ul>
+<li>Часто выполняются конкурентные операции чтения и записи.</li>
+<li>Вы не хотите вручную защищать карту с помощью <code>sync.Mutex</code>.</li>
+<li>Требуется высокая производительность при частых операциях с данными в многопоточном окружении.</li>
+</ul>
+<p><strong>Однако</strong> <code>sync.Map</code> не всегда эффективнее, чем обычная карта с <code>sync.Mutex</code>. Если операции с картой редки или преимущественно записи, использование обычной карты с блокировками может быть быстрее.</p>
+<h3 id="Пример-сценария-с-syncmap-в-горутинах"><a class="header" href="#Пример-сценария-с-syncmap-в-горутинах">Пример сценария с <code>sync.Map</code> в горутинах</a></h3>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "sync"
+)
+
+func main() {
+    var m sync.Map
+    var wg sync.WaitGroup
+
+    // Запуск нескольких горутин для записи данных
+    for i := 0; i &lt; 5; i++ {
+        wg.Add(1)
+        go func(id int) {
+            defer wg.Done()
+            m.Store(fmt.Sprintf("key%d", id), id)
+        }(i)
+    }
+
+    wg.Wait()
+
+    // Перебор всех записей после завершения горутин
+    m.Range(func(key, value interface{}) bool {
+        fmt.Printf("Ключ: %v, Значение: %v\n", key, value)
+        return true
+    })
+}
+</code></pre>
+<p>Здесь мы создаём несколько горутин, каждая из которых записывает уникальные ключи и значения в карту. После завершения всех горутин мы используем <code>Range</code>, чтобы вывести содержимое карты.</p>
+<h3 id="Частые-ошибки-при-работе-с-syncmap"><a class="header" href="#Частые-ошибки-при-работе-с-syncmap">Частые ошибки при работе с <code>sync.Map</code></a></h3>
+<ol>
+<li>
+<p><strong>Предположение о типе данных</strong>: так как <code>sync.Map</code> работает с интерфейсами, вы всегда получаете значения типа <code>interface{}</code>. При чтении значений вам нужно использовать приведение типов, иначе может возникнуть паника.</p>
+<pre><code class="language-go">value, ok := m.Load("key")
+intValue := value.(int) // Приведение типов
+</code></pre>
+</li>
+<li>
+<p><strong>Неиспользование <code>sync.Map</code> по назначению</strong>: <code>sync.Map</code> оптимизирована для сценариев, где много горутин одновременно работают с картой. Если работа с картой однопоточная или требует большого количества операций записи, использование обычной карты с <code>sync.Mutex</code> может быть более подходящим.</p>
+</li>
+<li>
+<p><strong>Использование сложных ключей</strong>: так как ключи в <code>sync.Map</code> являются интерфейсами, убедитесь, что ключи могут корректно сравниваться, иначе могут возникнуть непредсказуемые результаты. Например, при использовании структур в качестве ключей важно реализовать правильные методы сравнения.</p>
+</li>
+</ol>
+<br>
+<h1 id="synccond--Сложные-условия-для-синхронизации"><a class="header" href="#synccond--Сложные-условия-для-синхронизации">sync.Cond — Сложные условия для синхронизации</a></h1>
+<p>sync.Cond — это условная переменная, позволяющая одной или нескольким горутинам ждать сигнала о том, что нужно продолжить выполнение. Она используется в случаях, когда несколько горутин должны дождаться определённого условия.</p>
+<h3 id="Основные-методы"><a class="header" href="#Основные-методы">Основные методы:</a></h3>
+<ul>
+<li>Wait() — горутина ждёт сигнала.</li>
+<li>Signal() — сигнализирует одной горутине.</li>
+<li>Broadcast() — сигнализирует всем горутинам.</li>
+</ul>
+<h3 id="Пример-использования"><a class="header" href="#Пример-использования">Пример использования:</a></h3>
+<pre><code class="language-go">package main
+
+import (
+   "fmt"
+   "sync"
+   "time"
+)
+
+var ready = false
+var mu sync.Mutex
+var cond = sync.NewCond(&amp;mu)
+
+func worker(id int, wg *sync.WaitGroup) {
+   defer wg.Done()
+
+    cond.L.Lock()
+    for !ready {
+        cond.Wait() // Ожидаем сигнала
+    }
+    fmt.Printf("Worker %d начал работу\n", id)
+    cond.L.Unlock()
+}
+
+func main() {
+   var wg sync.WaitGroup
+
+    for i := 1; i &lt;= 5; i++ {
+        wg.Add(1)
+        go worker(i, &amp;wg)
+    }
+
+    time.Sleep(time.Second)
+    cond.L.Lock()
+    ready = true
+    cond.Broadcast() // Сигнализируем всем горутинам
+    cond.L.Unlock()
+
+    wg.Wait()
+}
+</code></pre>
+<blockquote>
+<p>Когда использовать: sync.Cond используется для синхронизации сложных зависимостей между горутинами, когда одна или несколько горутин должны ждать выполнения определённого условия.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Интерфейсы"><a class="header" href="#Интерфейсы">Интерфейсы</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Структуры-интерфейсы-и-реверсивные-методы"><a class="header" href="#Структуры-интерфейсы-и-реверсивные-методы">Структуры, интерфейсы и реверсивные методы</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Работа-с-паникой-и-defer"><a class="header" href="#Работа-с-паникой-и-defer">Работа с паникой и defer</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Работа-с-файловой-системой"><a class="header" href="#Работа-с-файловой-системой">Работа с файловой системой</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="Основы-go"><a class="header" href="#Основы-go">Основы Go</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Основы-go-1"><a class="header" href="#Основы-go-1">Основы Go</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="slice-map-глубже"><a class="header" href="#slice-map-глубже">Slice, map глубже</a></h1>
+<p>Давайте углубимся в темы <strong>slice</strong> и <strong>map</strong> в Go, чтобы лучше понять их работу, внутренние механизмы и применимость в реальных проектах.</p>
+<h1 id="Углубляемся-в-slice"><a class="header" href="#Углубляемся-в-slice">Углубляемся в Slice</a></h1>
+<h4 id="Внутреннее-устройство-slice"><a class="header" href="#Внутреннее-устройство-slice">Внутреннее устройство Slice</a></h4>
+<p>Под капотом <strong>slice</strong> хранит три значения:</p>
+<ol>
+<li><strong>Указатель на базовый массив</strong>: Срез не хранит данные напрямую, а лишь содержит указатель на базовый массив, который фактически хранит элементы.</li>
+<li><strong>Длина (len)</strong>: Количество элементов в срезе.</li>
+<li><strong>Ёмкость (cap)</strong>: Количество элементов, которое может хранить базовый массив, начиная с первого элемента среза. Ёмкость всегда больше или равна длине.</li>
+</ol>
+<pre><code class="language-go">struct {
+	array *[]T
+	length int
+	capacity int
+}
+</code></pre>
+<p>Пример:</p>
+<pre><code class="language-go">arr := [5]int{1, 2, 3, 4, 5}
+slice := arr[1:4] // slice: [2, 3, 4], len(slice) = 3, cap(slice) = 4
+</code></pre>
+<p>В этом примере срез начинается с индекса 1 массива <code>arr</code>, поэтому он может "видеть" оставшиеся 4 элемента массива. Однако длина среза — это только 3 элемента: <code>[2, 3, 4]</code>.</p>
+<h4 id="Расширение-slice"><a class="header" href="#Расширение-slice">Расширение Slice</a></h4>
+<p>Когда вы добавляете элементы в срез с помощью функции <strong><code>append</code></strong>, Go автоматически создаёт новый базовый массив, если текущая ёмкость недостаточна. Этот новый массив будет вдвое больше старого, что позволяет улучшить производительность при многократном добавлении элементов.</p>
+<p>Пример:</p>
+<pre><code class="language-go">slice := []int{1, 2, 3}
+slice = append(slice, 4, 5, 6)
+fmt.Println(slice) // [1, 2, 3, 4, 5, 6]
+</code></pre>
+<p>Если исходная ёмкость была меньше 6, Go создаст новый массив и скопирует туда старые элементы.</p>
+<h4 id="Работа-со-срезами"><a class="header" href="#Работа-со-срезами">Работа со срезами</a></h4>
+<p>Важно понимать, что срезы могут <strong>делить один и тот же базовый массив</strong>. Это может привести к неожиданным результатам, если вы будете изменять один срез, а изменения отразятся на другом.</p>
+<p>Пример:</p>
+<pre><code class="language-go">arr := [5]int{1, 2, 3, 4, 5}
+slice1 := arr[1:4] // slice1: [2, 3, 4]
+slice2 := arr[2:5] // slice2: [3, 4, 5]
+slice1[1] = 10     // Изменяем slice1
+fmt.Println(arr)    // [1, 2, 10, 4, 5] - изменился массив
+fmt.Println(slice2) // [10, 4, 5] - изменился и slice2
+</code></pre>
+<p>Чтобы избежать таких эффектов, можно копировать данные в новый срез с помощью функции <strong><code>copy</code></strong>.</p>
+<h4 id="zero-value-slice"><a class="header" href="#zero-value-slice">Zero value Slice</a></h4>
+<p>Нулевой срез имеет значение <code>nil</code>, но с ним можно работать, как с обычным срезом — добавлять элементы, получать длину и т.д. Это упрощает инициализацию срезов и избавляет от необходимости явного создания пустых срезов.</p>
+<pre><code class="language-go">var slice []int
+fmt.Println(slice == nil) // true
+slice = append(slice, 1)
+fmt.Println(slice) // [1]
+</code></pre>
+<h2 id="Особенность-slice-при-передаче"><a class="header" href="#Особенность-slice-при-передаче">Особенность slice при передаче</a></h2>
+<p>Когда вы будете активно работать со слайсами, может возникнуть ситуация, которую можно назвать <strong>"Заблуждение указателей слайса"</strong> (условное название). Часто разработчики ошибочно полагают, что слайсы ведут себя как указатели, и любые изменения, такие как добавление элементов через <strong><code>append</code></strong>, будут видны после возврата из функции. Однако, это не совсем так.</p>
+<p>Рассмотрим пример:</p>
+<pre><code class="language-go">func main() {
+    aqua := make([]int, 0, 2)
+    appendSlice(aqua)
+    fmt.Println(aqua) // Ожидаем [1], но будет []
+}
+
+func appendSlice(aqua []int) {
+    aqua = append(aqua, 1)
+}
+</code></pre>
+<p>В этом коде мы создаём слайс <code>aqua</code> и передаём его в функцию <strong><code>appendSlice</code></strong>, которая должна была добавить в него элемент. Однако, когда мы печатаем <code>aqua</code> в <code>main</code>, результат остаётся пустым.</p>
+<h3 id="Почему-это-происходит"><a class="header" href="#Почему-это-происходит">Почему это происходит?</a></h3>
+<p>Хотя слайс и содержит указатель на базовый массив, важно помнить, что сам слайс (структура, содержащая указатель, длину и ёмкость) передаётся в функцию <strong>по значению</strong>. Это означает, что в функции <strong><code>appendSlice</code></strong> мы работаем с копией слайса. Изменения, сделанные в этой копии, не отражаются на оригинальной переменной <code>aqua</code> в <code>main</code>.</p>
+<p>В данном случае функция <strong><code>append</code></strong> может вернуть новый слайс, если при добавлении элементов ёмкости исходного базового массива не хватает. Поскольку в функции используется копия слайса, эти изменения не затрагивают исходный слайс в <code>main</code>.</p>
+<h3 id="Как-это-исправить"><a class="header" href="#Как-это-исправить">Как это исправить?</a></h3>
+<p>Чтобы изменения в слайсе были видны вне функции, нужно передать слайс <strong>по указателю</strong>. Это позволит функции работать с оригинальной структурой слайса:</p>
+<pre><code class="language-go">func main() {
+    aqua := make([]int, 0, 2)
+    appendSlice(&amp;aqua)
+    fmt.Println(aqua) // Теперь будет [1]
+}
+
+func appendSlice(aqua *[]int) {
+    *aqua = append(*aqua, 1)
+}
+</code></pre>
+<p>Теперь мы передаём указатель на слайс, и функция изменяет оригинальный слайс, добавляя в него элемент. Это работает, потому что теперь мы модифицируем саму структуру слайса через указатель, а не его копию.</p>
+<blockquote>
+<p>Хотя слайс содержит указатель на базовый массив, сама структура слайса передаётся <strong>по значению</strong>. Чтобы изменения были видны вне функции, необходимо передавать слайс по указателю.</p>
+</blockquote>
+<br>
+<hr />
+<h1 id="Углубляемся-в-map"><a class="header" href="#Углубляемся-в-map">Углубляемся в Map</a></h1>
+<h4 id="Внутреннее-устройство-map"><a class="header" href="#Внутреннее-устройство-map">Внутреннее устройство Map</a></h4>
+<p>Карта в Go представляет собой хеш-таблицу. Для каждого ключа вычисляется хеш, и на основе этого хеша определяется, в какое "ведро" (bucket) поместить этот ключ. Если несколько ключей имеют одинаковый хеш, они помещаются в одно ведро (так называемые <strong>коллизии</strong>), и внутри этого ведра Go использует линейный поиск для нахождения нужного ключа.</p>
+<p>Эффективность карты основана на том, что поиск по хеш-таблице обычно выполняется за <strong>O(1)</strong> — константное время, хотя в случае коллизий время может увеличиться (Примерно будет <strong>O(N)</strong>).</p>
+<pre><code class="language-go">type hmap struct {
+  // ...more code
+  count       int
+  B           uint 8
+  noverflow   uint 16
+  hash0       uint 32
+  buckets     unsafe.Pointer
+  oldbuckets  unsafe.Pointer
+}
+</code></pre>
+<h4 id="Инициализация-карты"><a class="header" href="#Инициализация-карты">Инициализация карты</a></h4>
+<p>Часто карты инициализируются с помощью функции <strong><code>make</code></strong>, которая позволяет задать начальный размер карты. Если известно, что карта будет содержать много элементов, задание размера может улучшить производительность, так как это позволяет избежать перерасчёта и перераспределения хеш-таблицы.</p>
+<p>Пример:</p>
+<pre><code class="language-go">m := make(map[string]int, 100) // Создаём карту с начальной ёмкостью на 100 элементов
+</code></pre>
+<h4 id="Удаление-элементов-из-карты"><a class="header" href="#Удаление-элементов-из-карты">Удаление элементов из карты</a></h4>
+<p>Для удаления элементов используется функция <strong><code>delete</code></strong>. Если ключ отсутствует в карте, то ничего страшного не произойдёт — ошибка не будет вызвана.</p>
+<pre><code class="language-go">delete(m, "apple") // Удалим элемент с ключом "apple"
+</code></pre>
+<h4 id="Обход-элементов-карты"><a class="header" href="#Обход-элементов-карты">Обход элементов карты</a></h4>
+<p>При использовании цикла <strong><code>for range</code></strong> порядок обхода элементов карты не гарантируется. Он будет случайным, и при каждом запуске программы может быть разным.</p>
+<pre><code class="language-go">m := map[string]int{"apple": 1, "banana": 2}
+for key, value := range m {
+    fmt.Println(key, value)
+}
+</code></pre>
+<p>Если вам требуется упорядоченный обход, нужно вручную сортировать ключи.</p>
+<p>Пример сортировки ключей карты:</p>
+<pre><code class="language-go">keys := make([]string, 0, len(m))
+for key := range m {
+    keys = append(keys, key)
+}
+sort.Strings(keys) // Сортируем ключи
+for _, key := range keys {
+    fmt.Println(key, m[key])
+}
+</code></pre>
+<h4 id="Карты-как-нулевые-значения"><a class="header" href="#Карты-как-нулевые-значения">Карты как нулевые значения</a></h4>
+<p>Карта, как и срезы, может иметь значение <strong><code>nil</code></strong>. Это полезно для обработки отсутствия значений, но попытка добавления элементов в <strong>nil map</strong> приведёт к панике.</p>
+<pre><code class="language-go">var m map[string]int
+fmt.Println(m == nil) // true
+// m["apple"] = 5 // Это вызовет панику!
+</code></pre>
+<p>Чтобы избежать этого, всегда нужно инициализировать карту перед использованием.</p>
+<h4 id="Ограничения-ключей-и-значений"><a class="header" href="#Ограничения-ключей-и-значений">Ограничения ключей и значений</a></h4>
+<p>Ключи в картах должны быть <strong>сравнимыми типами</strong>, то есть типами, для которых возможны операции сравнения (<code>==</code>, <code>!=</code>). Это означает, что <strong>срезы</strong> и <strong>функции</strong> не могут быть ключами карты, так как они не сравнимы. Однако строки, числа, структуры и даже интерфейсы могут быть ключами.</p>
+<p>Работа с мапами (карта) в Go может быть весьма удобной, однако существуют несколько особенностей, на которые стоит обратить внимание, чтобы избежать распространённых ошибок. В этой статье мы рассмотрим основные аспекты работы с мапами и их эвакуацию.</p>
+<h2 id="Эвакуация-данных-в-мапах"><a class="header" href="#Эвакуация-данных-в-мапах">Эвакуация данных в мапах</a></h2>
+<p>Эвакуация - это процесс когда map переносит свои значения из одной области памяти в другую. Это происходит из-за того что число значений в каждом отдельном bucket максимально равно 8.</p>
+<p>В тот момент времени, когда среднее количество значений в bucket составляет 6.5, go понимает, что размер map не удовлетворяет необходимому. Начинается процесс расширения map.</p>
+<p>Следует отметить, что сам процесс эвакуации может происходить некоторое время, на протяжение которого новые и старые данные будут связаны.</p>
+<h2 id="Заключение-2"><a class="header" href="#Заключение-2">Заключение</a></h2>
+<p>Работа с мапами в Go предоставляет множество возможностей для удобного хранения и извлечения данных. Однако, как и с любой другой структурой данных, важно знать основные правила и избежать распространённых ошибок. Зная о таких моментах, как эвакуация данных, проверка наличия ключей и правильная инициализация мап, вы сможете эффективно использовать эту мощную структуру данных в своих проектах.</p>
+<br>
+<hr />
+<h1 id="Дополнительные-материалы"><a class="header" href="#Дополнительные-материалы">Дополнительные материалы</a></h1>
+<ul>
+<li><a href="https://habr.com/ru/companies/avito/articles/774618/">Мапы в Go: Уровень Pro</a></li>
+<li><a href="https://www.youtube.com/watch?v=P_SXTUiA-9Y&amp;t=1222s">Как на самом деле работает тип Map в Go</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Горутины-synccord-и-worker-pool"><a class="header" href="#Горутины-synccord-и-worker-pool">Горутины, sync.Cord и Worker Pool</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="scheduler-и-уникальность-горутин"><a class="header" href="#scheduler-и-уникальность-горутин">Scheduler и уникальность горутин</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Небезопасный-go"><a class="header" href="#Небезопасный-go">Небезопасный Go</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="Системное-программирование-в-go-и-сигналы"><a class="header" href="#Системное-программирование-в-go-и-сигналы">Системное программирование в Go и сигналы</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gc-и-методы-работы-с-ним"><a class="header" href="#gc-и-методы-работы-с-ним">GC и методы работы с ним</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
                     </main>
 

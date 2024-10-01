@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_1.html"><strong aria-hidden="true">2.</strong> Введение</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_1/chapter_2.html" class="active"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_1.html"><strong aria-hidden="true">3.</strong> Основы Go</a></li><li class="chapter-item expanded "><a href="../chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Погружение в Go</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_1.html"><strong aria-hidden="true">2.</strong> Основы Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_1/chapter_2.html" class="active"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_4.html"><strong aria-hidden="true">2.3.</strong> Основные конструкции управления в Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_5.html"><strong aria-hidden="true">2.4.</strong> Slice, map и их особенности</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_6.html"><strong aria-hidden="true">2.5.</strong> Горутины</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_7.html"><strong aria-hidden="true">2.6.</strong> Методы синхронизации между горутинами</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_8.html"><strong aria-hidden="true">2.7.</strong> Интерфейсы</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_9.html"><strong aria-hidden="true">2.8.</strong> Структуры, интерфейсы и реверсивные методы</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_10.html"><strong aria-hidden="true">2.9.</strong> Работа с паникой и defer</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_11.html"><strong aria-hidden="true">2.10.</strong> Работа с файловой системой</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_12.html"><strong aria-hidden="true">2.11.</strong> Generics</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_0.html"><strong aria-hidden="true">3.</strong> Погружение в глубину</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_2/chapter_1.html"><strong aria-hidden="true">3.1.</strong> Интерфейсы, рефлексия и type switch</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_2.html"><strong aria-hidden="true">3.2.</strong> Slice, map глубже</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_3.html"><strong aria-hidden="true">3.3.</strong> Горутины, sync.Cord и Worker Pool</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_4.html"><strong aria-hidden="true">3.4.</strong> Scheduler и уникальность горутин</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_5.html"><strong aria-hidden="true">3.5.</strong> Небезопасный Go</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_6.html"><strong aria-hidden="true">3.6.</strong> Системное программирование в Go и сигналы</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_7.html"><strong aria-hidden="true">3.7.</strong> GC и методы работы с ним</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Библиотеки Go</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -213,6 +213,34 @@ fmt.Print("World!")  // Выведет: Hello, World!
 <p>Где <code>%s</code> заменится на строку, а <code>%d</code> — на число.</p>
 <p>Таким образом, <strong><code>fmt</code></strong> предоставляет разные варианты для вывода текста в зависимости от ваших нужд.</p>
 <hr />
+<h2 id="Ввод-данных-с-fmtscan"><a class="header" href="#Ввод-данных-с-fmtscan">Ввод данных с fmt.Scan</a></h2>
+<p>Теперь давайте добавим интерактивность в нашу программу. Мы будем не только выводить текст, но и принимать ввод от пользователя с помощью функции fmt.Scan.</p>
+<p>Пример с использованием fmt.Scan:</p>
+<pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+   var name string
+   fmt.Println("Введите ваше имя:")
+   fmt.Scan(&amp;name) // Считывает ввод пользователя
+   fmt.Printf("Привет, %s!\n", name) // Приветствует пользователя
+}
+</code></pre>
+<h3 id="Как-работает-fmtscan"><a class="header" href="#Как-работает-fmtscan">Как работает fmt.Scan?</a></h3>
+<ul>
+<li>fmt.Scan считывает данные, вводимые пользователем, и сохраняет их в переменную, переданную по ссылке (через &amp;).</li>
+<li>В данном примере мы объявили переменную name типа string и затем передали её в fmt.Scan(&amp;name).</li>
+<li>Пользователь вводит своё имя, и программа выводит приветствие, используя fmt.Printf для форматированного вывода.</li>
+</ul>
+<h4 id="Несколько-переменных-с-fmtscan"><a class="header" href="#Несколько-переменных-с-fmtscan">Несколько переменных с fmt.Scan:</a></h4>
+<p>Можно одновременно считывать несколько переменных:</p>
+<pre><code class="language-go">   var firstName, lastName string
+   fmt.Println("Введите ваше имя и фамилию:")
+   fmt.Scan(&amp;firstName, &amp;lastName)
+   fmt.Printf("Привет, %s %s!\n", firstName, lastName)
+</code></pre>
+<p>Здесь функция fmt.Scan ждёт два значения (имя и фамилию) и сохраняет их в соответствующие переменные.</p>
 <h2 id="Дополнительные-задания"><a class="header" href="#Дополнительные-задания">Дополнительные задания:</a></h2>
 <p>Чтобы закрепить материал, попробуйте выполнить следующие задачи:</p>
 <ol>
@@ -223,6 +251,7 @@ fmt.Print("World!")  // Выведет: Hello, World!
 <pre><code class="language-Go">fmt.Printf("Привет, %s! Тебе %d лет.", "Иван", 25)
 </code></pre>
 Замените "Иван" и возраст на свои данные.<br><br></li>
+<li><strong>Добавьте в программу ввод возраста с помощью fmt.Scan</strong> и выведите сообщение: "Привет, Ваше имя! Тебе возраст лет".</li>
 </ol>
 <blockquote>
 <p><em><strong>Совет:</strong></em>

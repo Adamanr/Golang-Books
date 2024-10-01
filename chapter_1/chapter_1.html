@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Введение - Курс по Golang</title>
+        <title>Основы Go - Курс по Golang</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_1.html" class="active"><strong aria-hidden="true">2.</strong> Введение</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_1/chapter_2.html"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_1.html"><strong aria-hidden="true">3.</strong> Основы Go</a></li><li class="chapter-item expanded "><a href="../chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Погружение в Go</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_1.html" class="active"><strong aria-hidden="true">2.</strong> Основы Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_1/chapter_2.html"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_4.html"><strong aria-hidden="true">2.3.</strong> Основные конструкции управления в Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_5.html"><strong aria-hidden="true">2.4.</strong> Slice, map и их особенности</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_6.html"><strong aria-hidden="true">2.5.</strong> Горутины</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_7.html"><strong aria-hidden="true">2.6.</strong> Методы синхронизации между горутинами</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_8.html"><strong aria-hidden="true">2.7.</strong> Интерфейсы</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_9.html"><strong aria-hidden="true">2.8.</strong> Структуры, интерфейсы и реверсивные методы</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_10.html"><strong aria-hidden="true">2.9.</strong> Работа с паникой и defer</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_11.html"><strong aria-hidden="true">2.10.</strong> Работа с файловой системой</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_12.html"><strong aria-hidden="true">2.11.</strong> Generics</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_0.html"><strong aria-hidden="true">3.</strong> Погружение в глубину</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_2/chapter_1.html"><strong aria-hidden="true">3.1.</strong> Интерфейсы, рефлексия и type switch</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_2.html"><strong aria-hidden="true">3.2.</strong> Slice, map глубже</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_3.html"><strong aria-hidden="true">3.3.</strong> Горутины, sync.Cord и Worker Pool</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_4.html"><strong aria-hidden="true">3.4.</strong> Scheduler и уникальность горутин</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_5.html"><strong aria-hidden="true">3.5.</strong> Небезопасный Go</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_6.html"><strong aria-hidden="true">3.6.</strong> Системное программирование в Go и сигналы</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_7.html"><strong aria-hidden="true">3.7.</strong> GC и методы работы с ним</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Библиотеки Go</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -173,13 +173,31 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="Что-такое-go"><a class="header" href="#Что-такое-go">Что такое Go</a></h1>
-<p>Go — это не просто язык. Это инструмент, созданный для реальных задач: высоконагруженных систем, микросервисной архитектуры и быстрой разработки. За счёт своего простого и понятного синтаксиса, встроенной поддержки параллелизма и строгой типизации, Go уже завоевал сердца тысяч разработчиков по всему миру. Кроме того, в настоящее время компании активно внедряют Go, как основной язык для проектов различной сложности, от телефонии, до разработки простых сайтов компании. Язык имеет одно из наименьших количеств ключевых слов (25 слов, по сравнению с Python(35) и Java(50)) что означает, что вам не понадобится много времени, для запоминания стандартных конструкций.</p>
-<h1 id="Для-чего-используется-go"><a class="header" href="#Для-чего-используется-go">Для чего используется Go</a></h1>
-<p>Go язык обширный и на нём можно написать практически что угодно, дело лишь в удобстве подхода с использованием Go. Так например, если вы хотите написать на Go своё десткопное приложение, то пожалуйста - <a href="https://wails.io">Wails</a>, а если вы хотите написать игру на Go, то тоже без проблем - <a href="https://ebitengine.org">Ebitengine</a>. Я не берусь спорить за удобство данных фреймворков и их "лучшую" работоспособность, но практика показывает, что иногда нам может и не пригодится лишняя скорость работы приложения. Из основного, что разрабатывают сейчас на Go - микросервисы, высоконагруженные приложения. Кроме этих двух отраслей, есть ещё различные применения, что тоже имеют место быть в топе, но их делают реже, а это - backend-часть различных веб-приложений, cli-утилиты, разработка в сфере ИБ (Информационной безопасности) и наверно, что-то ещё делают, но я чаще видел это.</p>
-<h1 id="Особенности-перехода-и-изучения"><a class="header" href="#Особенности-перехода-и-изучения">Особенности перехода и изучения</a></h1>
-<p>Если вы переходите на Go с другого языка, то держитесь. В языке Go нет привычной многословности, как например есть в других backend языках. Конструкций в Go не так много, основное - if / switch / for, а вместо классов и типичного ООП у нас struct и interface. Если вы ещё новичок, то вам повезло, ведь для вас в каком-то роде, будет проще работать с меньшим количеством символов, всё просто и понятно, но так ли хорошо иметь так мало конструкций, это уже решите вы.</p>
-<h1 id="Создание-проекта-на-go"><a class="header" href="#Создание-проекта-на-go">Создание проекта на Go</a></h1>
+                        <h1 id="Что-такое-go"><a class="header" href="#Что-такое-go">Что такое Go?</a></h1>
+<p>Go — это гораздо больше, чем просто язык программирования. Это мощный инструмент, созданный для решения реальных задач: разработки высоконагруженных систем, микросервисов и приложений, где важны скорость и эффективность. Благодаря простому и лаконичному синтаксису, встроенной поддержке параллелизма и строгой статической типизации, Go стал фаворитом среди тысяч разработчиков по всему миру. Компании всё чаще выбирают Go для создания разнообразных проектов: от высокотехнологичных решений в сфере телекоммуникаций до простых веб-приложений.</p>
+<p>Одна из ключевых особенностей Go — его минимализм. Язык содержит всего 25 ключевых слов (в сравнении с 35 в Python и 50 в Java), что делает его легче для освоения. Вам не придётся учить множество синтаксических конструкций, чтобы быстро погрузиться в разработку. Но за этой простотой стоит мощный набор возможностей для создания сложных и масштабируемых решений.</p>
+<hr />
+<h1 id="Для-чего-используется-go"><a class="header" href="#Для-чего-используется-go">Для чего используется Go?</a></h1>
+<p>Go — универсальный язык, который позволяет решать самые разные задачи. Вы можете использовать его для создания практически любых типов приложений. Хотите разработать десктопное приложение? Воспользуйтесь фреймворком <a href="https://wails.io">Wails</a>. Мечтаете написать игру? Тогда на помощь придёт <a href="https://ebitengine.org">Ebitengine</a>.</p>
+<p>Хотя для таких задач существуют другие языки, Go активно используется там, где критически важны производительность и простота. Основные направления, в которых Go сейчас занимает лидирующие позиции, — это:</p>
+<ul>
+<li><strong>Микросервисы</strong>: Go идеально подходит для разработки распределённых систем с высокой производительностью.</li>
+<li><strong>Высоконагруженные системы</strong>: благодаря эффективной работе с многопоточностью и параллелизмом, Go позволяет создавать системы, которые справляются с большими объёмами данных и запросов.</li>
+</ul>
+<p>Также Go активно используется для:</p>
+<ul>
+<li>Разработки <strong>backend-частей веб-приложений</strong>,</li>
+<li>Создания <strong>CLI-утилит</strong> (командных интерфейсов),</li>
+<li>Проектов в области <strong>информационной безопасности</strong>.</li>
+</ul>
+<p>Хотя Go может быть применён практически для любой задачи, его сильные стороны лучше всего раскрываются в проектах, где важны скорость и надёжность.</p>
+<hr />
+<h1 id="Особенности-перехода-на-go-и-изучения"><a class="header" href="#Особенности-перехода-на-go-и-изучения">Особенности перехода на Go и изучения</a></h1>
+<p>Если вы переходите на Go с другого языка программирования, вас ждут интересные открытия. В отличие от многих языков, Go избегает многословности и избыточных конструкций. Здесь всё максимально упрощено, что может сначала показаться ограничением, но на практике это делает код более читаемым и поддерживаемым.</p>
+<p>В Go всего несколько базовых конструкций управления, таких как <strong>if</strong>, <strong>switch</strong> и <strong>for</strong>. Вместо традиционного объектно-ориентированного подхода с классами, Go предлагает использовать <strong>структуры (struct)</strong> и <strong>интерфейсы (interface)</strong> для организации кода.</p>
+<p>Новичкам особенно повезло — минимализм Go делает его доступным для быстрого освоения. Меньше синтаксических правил, больше концентрации на логике программы. Однако, насколько удобным для вас окажется такой подход, вы решите сами.</p>
+<hr />
+<h1 id="Установка-go"><a class="header" href="#Установка-go">Установка Go</a></h1>
 <p>Для изучения Go вам понадобится Go проект на своём компьютере, чтобы вы могли запускать код из примеров и выполнять дополнительные задания для лучшего изучения языка. Для начала перейдём на <a href="https://go.dev/dl/">сайт Go</a> и скачаем компилятор:<br><br>
 <strong>Windows</strong>:</p>
 <ol>
@@ -223,7 +241,8 @@
 <li>Пакет устанавливает Go в <em><strong>/usr/local/go</strong></em>. Каталог <em><strong>/usr/local/go/bin</strong></em> в вашу переменную среды (PATH). Возможно, вам придется перезапустить открытые сеансы терминала, чтобы изменения вступили в силу.</li>
 <li>Убедитесь, что вы установили Go, открыв командную строку и набрав следующая команда: <code>go version</code></li>
 </ol>
-<h1 id="Создание-проекта-на-go-1"><a class="header" href="#Создание-проекта-на-go-1">Создание проекта на go</a></h1>
+<hr />
+<h1 id="Создание-проекта-на-go"><a class="header" href="#Создание-проекта-на-go">Создание проекта на go</a></h1>
 <p>Теперь после установки Go создадим свой первый проект на Go.</p>
 <ol>
 <li>Создайте папку для проекта (Она может иметь любое название, но лучше в стиле app1)</li>
