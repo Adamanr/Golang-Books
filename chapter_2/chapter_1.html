@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Интерфейсы, рефлексия и type switch - Курс по Golang</title>
+        <title>Рефлексия - Курс по Golang</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_1.html"><strong aria-hidden="true">2.</strong> Основы Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_1/chapter_2.html"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_4.html"><strong aria-hidden="true">2.3.</strong> Основные конструкции управления в Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_5.html"><strong aria-hidden="true">2.4.</strong> Slice, map и их особенности</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_6.html"><strong aria-hidden="true">2.5.</strong> Горутины</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_7.html"><strong aria-hidden="true">2.6.</strong> Методы синхронизации между горутинами</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_8.html"><strong aria-hidden="true">2.7.</strong> Интерфейсы</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_9.html"><strong aria-hidden="true">2.8.</strong> Структуры, интерфейсы и реверсивные методы</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_10.html"><strong aria-hidden="true">2.9.</strong> Работа с паникой и defer</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_11.html"><strong aria-hidden="true">2.10.</strong> Работа с файловой системой</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_12.html"><strong aria-hidden="true">2.11.</strong> Generics</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_0.html"><strong aria-hidden="true">3.</strong> Погружение в глубину</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_2/chapter_1.html" class="active"><strong aria-hidden="true">3.1.</strong> Интерфейсы, рефлексия и type switch</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_2.html"><strong aria-hidden="true">3.2.</strong> Slice, map глубже</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_3.html"><strong aria-hidden="true">3.3.</strong> Горутины, sync.Cord и Worker Pool</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_4.html"><strong aria-hidden="true">3.4.</strong> Scheduler и уникальность горутин</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_5.html"><strong aria-hidden="true">3.5.</strong> Небезопасный Go</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_6.html"><strong aria-hidden="true">3.6.</strong> Системное программирование в Go и сигналы</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_7.html"><strong aria-hidden="true">3.7.</strong> GC и методы работы с ним</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Библиотеки Go</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_1.html"><strong aria-hidden="true">2.</strong> Основы Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_1/chapter_2.html"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_4.html"><strong aria-hidden="true">2.3.</strong> Основные конструкции управления в Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_5.html"><strong aria-hidden="true">2.4.</strong> Slice, map и их особенности</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_6.html"><strong aria-hidden="true">2.5.</strong> Горутины</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_7.html"><strong aria-hidden="true">2.6.</strong> Методы синхронизации между горутинами</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_8.html"><strong aria-hidden="true">2.7.</strong> Структуры</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_9.html"><strong aria-hidden="true">2.8.</strong> Интерфейсы</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_10.html"><strong aria-hidden="true">2.9.</strong> Работа с паникой и defer</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_11.html"><strong aria-hidden="true">2.10.</strong> Работа с файловой системой</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_12.html"><strong aria-hidden="true">2.11.</strong> Дженерики в Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_13.html"><strong aria-hidden="true">2.12.</strong> Работа с ошибками</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_0.html"><strong aria-hidden="true">3.</strong> Погружение в глубину</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_2/chapter_1.html" class="active"><strong aria-hidden="true">3.1.</strong> Рефлексия</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_2.html"><strong aria-hidden="true">3.2.</strong> Slice, map глубже</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_3.html"><strong aria-hidden="true">3.3.</strong> Scheduler и уникальность горутин в Go</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_4.html"><strong aria-hidden="true">3.4.</strong> Небезопасный Go</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_5.html"><strong aria-hidden="true">3.5.</strong> Системное программирование в Go и сигналы</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_6.html"><strong aria-hidden="true">3.6.</strong> GC и методы работы с ним</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_7.html"><strong aria-hidden="true">3.7.</strong> </a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Библиотеки Go</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -173,7 +173,187 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="Основы-go"><a class="header" href="#Основы-go">Основы Go</a></h1>
+                        <h1 id="Рефлексия-в-go"><a class="header" href="#Рефлексия-в-go">Рефлексия в Go</a></h1>
+<p>В языке Go существует мощный механизм для работы с типами и значениями данных на этапе выполнения программы — <strong>рефлексия</strong>. Рефлексия позволяет программе динамически изучать свои собственные структуры, получать информацию о типах и работать с ними даже в тех случаях, когда типы не известны на этапе компиляции.</p>
+<h3 id="Основы-рефлексии"><a class="header" href="#Основы-рефлексии">Основы рефлексии</a></h3>
+<p>Go предоставляет рефлексию через пакет <code>reflect</code>, который содержит типы и функции для динамического анализа и манипуляции типами.</p>
+<p>Ключевыми типами в пакете <code>reflect</code> являются:</p>
+<ul>
+<li><strong><code>reflect.Type</code></strong> — представляет тип значения.</li>
+<li><strong><code>reflect.Value</code></strong> — представляет само значение.</li>
+</ul>
+<h4 id="Как-использовать-рефлексию"><a class="header" href="#Как-использовать-рефлексию">Как использовать рефлексию?</a></h4>
+<p>Для работы с рефлексией нужно получить информацию о типе и значении переменной с помощью функций <code>reflect.TypeOf()</code> и <code>reflect.ValueOf()</code> соответственно.</p>
+<p>Пример:</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "reflect"
+)
+
+func main() {
+    var x int = 42
+    t := reflect.TypeOf(x)
+    v := reflect.ValueOf(x)
+
+    fmt.Println("Тип:", t)
+    fmt.Println("Значение:", v)
+}
+</code></pre>
+<p>Здесь мы используем <code>reflect.TypeOf()</code> для получения типа переменной <code>x</code> и <code>reflect.ValueOf()</code> для получения её значения.</p>
+<h3 id="Основные-функции-и-методы-рефлексии"><a class="header" href="#Основные-функции-и-методы-рефлексии">Основные функции и методы рефлексии</a></h3>
+<h4 id="reflecttypeof"><a class="header" href="#reflecttypeof"><code>reflect.TypeOf()</code></a></h4>
+<p>Функция <code>reflect.TypeOf()</code> возвращает объект типа <code>reflect.Type</code>, который описывает тип значения:</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "reflect"
+)
+
+func main() {
+    var x float64 = 3.14
+    t := reflect.TypeOf(x)
+    fmt.Println("Тип:", t)
+}
+</code></pre>
+<h4 id="reflectvalueof"><a class="header" href="#reflectvalueof"><code>reflect.ValueOf()</code></a></h4>
+<p>Функция <code>reflect.ValueOf()</code> возвращает объект типа <code>reflect.Value</code>, который содержит само значение:</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "reflect"
+)
+
+func main() {
+    var x float64 = 3.14
+    v := reflect.ValueOf(x)
+    fmt.Println("Значение:", v)
+    fmt.Println("Тип значения через Value:", v.Type())
+}
+</code></pre>
+<p>С помощью <code>reflect.Value</code> можно выполнять различные операции над значениями, такие как вызов методов, получение и изменение полей структур.</p>
+<h3 id="Манипуляции-с-переменными-через-рефлексию"><a class="header" href="#Манипуляции-с-переменными-через-рефлексию">Манипуляции с переменными через рефлексию</a></h3>
+<p>Go позволяет изменять значения переменных через рефлексию, но для этого необходимо передавать в функции не само значение, а его указатель, так как изменение значений возможно только у адресуемых (modifiable) переменных.</p>
+<p>Пример изменения значения переменной через рефлексию:</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "reflect"
+)
+
+func main() {
+    var x int = 10
+    fmt.Println("До:", x)
+
+    v := reflect.ValueOf(&amp;x).Elem() // Получаем доступ к значению через указатель
+    v.SetInt(100)                   // Изменяем значение
+
+    fmt.Println("После:", x)
+}
+</code></pre>
+<p>Здесь <code>reflect.ValueOf(&amp;x)</code> получает указатель на переменную <code>x</code>, а метод <code>Elem()</code> позволяет получить доступ к значению, чтобы его изменить. Метод <code>SetInt()</code> позволяет установить новое значение для переменной типа <code>int</code>.</p>
+<h3 id="Работа-с-полями-и-методами-структур"><a class="header" href="#Работа-с-полями-и-методами-структур">Работа с полями и методами структур</a></h3>
+<p>Рефлексия позволяет динамически получать и изменять значения полей структур, а также вызывать их методы.</p>
+<h4 id="Получение-и-установка-полей-структур"><a class="header" href="#Получение-и-установка-полей-структур">Получение и установка полей структур</a></h4>
+<p>Пример работы с полями структур через рефлексию:</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "reflect"
+)
+
+type Person struct {
+    Name string
+    Age  int
+}
+
+func main() {
+    person := Person{Name: "Alice", Age: 30}
+
+    v := reflect.ValueOf(&amp;person).Elem() // Получаем значение структуры через указатель
+
+    // Получаем поле "Name"
+    nameField := v.FieldByName("Name")
+    fmt.Println("Имя:", nameField)
+
+    // Устанавливаем новое значение для поля "Name"
+    if nameField.CanSet() {
+        nameField.SetString("Bob")
+    }
+    fmt.Println("Новое имя:", person.Name)
+}
+</code></pre>
+<p>В этом примере через <code>FieldByName()</code> получаем доступ к полю структуры, а метод <code>CanSet()</code> проверяет, можно ли изменять значение этого поля.</p>
+<h4 id="Вызов-методов-через-рефлексию"><a class="header" href="#Вызов-методов-через-рефлексию">Вызов методов через рефлексию</a></h4>
+<p>Рефлексия также позволяет вызывать методы структур. Это полезно, если вы не знаете заранее, какой метод вам потребуется вызвать.</p>
+<p>Пример вызова метода через рефлексию:</p>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "reflect"
+)
+
+type Person struct {
+    Name string
+    Age  int
+}
+
+func (p Person) SayHello() {
+    fmt.Printf("Привет, меня зовут %s!\n", p.Name)
+}
+
+func main() {
+    person := Person{Name: "Alice", Age: 30}
+
+    v := reflect.ValueOf(person)
+    method := v.MethodByName("SayHello")
+
+    if method.IsValid() {
+        method.Call(nil) // Вызываем метод без аргументов
+    }
+}
+</code></pre>
+<p>Метод <code>MethodByName()</code> позволяет найти метод структуры по его имени, а метод <code>Call()</code> используется для вызова этого метода.</p>
+<h3 id="Частые-ошибки-при-работе-с-рефлексией"><a class="header" href="#Частые-ошибки-при-работе-с-рефлексией">Частые ошибки при работе с рефлексией</a></h3>
+<ol>
+<li>
+<p><strong>Отсутствие проверки возможности изменения значения:</strong>
+Если вы пытаетесь изменить значение, но не проверяете с помощью <code>CanSet()</code>, это может привести к ошибке.</p>
+</li>
+<li>
+<p><strong>Работа с интерфейсами:</strong>
+Иногда при работе с рефлексией вы передаёте интерфейсное значение, и это может запутать, так как интерфейсы в Go хранят тип и значение отдельно. Для корректной работы с интерфейсами используйте метод <code>Interface()</code> у <code>reflect.Value</code>, чтобы получить исходное значение.</p>
+</li>
+<li>
+<p><strong>Прямое изменение значений:</strong>
+Рефлексия позволяет изменять значения только через указатели. Поэтому всегда проверяйте, работаете ли вы с адресуемыми (modifiable) значениями.</p>
+</li>
+</ol>
+<h3 id="Практические-задания"><a class="header" href="#Практические-задания">Практические задания</a></h3>
+<ol>
+<li>
+<p><strong>Изменение полей структуры:</strong>
+Напишите функцию, которая принимает на вход структуру с полями типа <code>int</code> и увеличивает все поля на заданное число с использованием рефлексии.</p>
+</li>
+<li>
+<p><strong>Вывод методов структуры:</strong>
+Напишите программу, которая с помощью рефлексии выводит все методы структуры и вызывает их по порядку.</p>
+</li>
+<li>
+<p><strong>Генерация экземпляра структуры по строке:</strong>
+Создайте программу, которая принимает имя типа структуры в виде строки и создаёт её экземпляр через рефлексию.</p>
+</li>
+<li>
+<p><strong>Валидация структуры:</strong>
+Напишите функцию валидации структуры, которая проверяет наличие и тип полей, основываясь на переданных метаданных. Если поле отсутствует или имеет неправильный тип, функция должна вернуть ошибку.</p>
+</li>
+</ol>
 
                     </main>
 

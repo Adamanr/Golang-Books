@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Горутины, sync.Cord и Worker Pool - Курс по Golang</title>
+        <title>Scheduler и уникальность горутин в Go - Курс по Golang</title>
 
 
         <!-- Custom HTML head -->
@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_1.html"><strong aria-hidden="true">2.</strong> Основы Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_1/chapter_2.html"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_4.html"><strong aria-hidden="true">2.3.</strong> Основные конструкции управления в Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_5.html"><strong aria-hidden="true">2.4.</strong> Slice, map и их особенности</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_6.html"><strong aria-hidden="true">2.5.</strong> Горутины</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_7.html"><strong aria-hidden="true">2.6.</strong> Методы синхронизации между горутинами</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_8.html"><strong aria-hidden="true">2.7.</strong> Интерфейсы</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_9.html"><strong aria-hidden="true">2.8.</strong> Структуры, интерфейсы и реверсивные методы</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_10.html"><strong aria-hidden="true">2.9.</strong> Работа с паникой и defer</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_11.html"><strong aria-hidden="true">2.10.</strong> Работа с файловой системой</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_12.html"><strong aria-hidden="true">2.11.</strong> Generics</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_0.html"><strong aria-hidden="true">3.</strong> Погружение в глубину</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_2/chapter_1.html"><strong aria-hidden="true">3.1.</strong> Интерфейсы, рефлексия и type switch</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_2.html"><strong aria-hidden="true">3.2.</strong> Slice, map глубже</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_3.html" class="active"><strong aria-hidden="true">3.3.</strong> Горутины, sync.Cord и Worker Pool</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_4.html"><strong aria-hidden="true">3.4.</strong> Scheduler и уникальность горутин</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_5.html"><strong aria-hidden="true">3.5.</strong> Небезопасный Go</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_6.html"><strong aria-hidden="true">3.6.</strong> Системное программирование в Go и сигналы</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_7.html"><strong aria-hidden="true">3.7.</strong> GC и методы работы с ним</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Библиотеки Go</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../intro.html"><strong aria-hidden="true">1.</strong> О курсе</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_1.html"><strong aria-hidden="true">2.</strong> Основы Go</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_1/chapter_2.html"><strong aria-hidden="true">2.1.</strong> Первое знакомство с Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_3.html"><strong aria-hidden="true">2.2.</strong> Работа с переменными</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_4.html"><strong aria-hidden="true">2.3.</strong> Основные конструкции управления в Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_5.html"><strong aria-hidden="true">2.4.</strong> Slice, map и их особенности</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_6.html"><strong aria-hidden="true">2.5.</strong> Горутины</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_7.html"><strong aria-hidden="true">2.6.</strong> Методы синхронизации между горутинами</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_8.html"><strong aria-hidden="true">2.7.</strong> Структуры</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_9.html"><strong aria-hidden="true">2.8.</strong> Интерфейсы</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_10.html"><strong aria-hidden="true">2.9.</strong> Работа с паникой и defer</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_11.html"><strong aria-hidden="true">2.10.</strong> Работа с файловой системой</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_12.html"><strong aria-hidden="true">2.11.</strong> Дженерики в Go</a></li><li class="chapter-item expanded "><a href="../chapter_1/chapter_13.html"><strong aria-hidden="true">2.12.</strong> Работа с ошибками</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_0.html"><strong aria-hidden="true">3.</strong> Погружение в глубину</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_2/chapter_1.html"><strong aria-hidden="true">3.1.</strong> Рефлексия</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_2.html"><strong aria-hidden="true">3.2.</strong> Slice, map глубже</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_3.html" class="active"><strong aria-hidden="true">3.3.</strong> Scheduler и уникальность горутин в Go</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_4.html"><strong aria-hidden="true">3.4.</strong> Небезопасный Go</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_5.html"><strong aria-hidden="true">3.5.</strong> Системное программирование в Go и сигналы</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_6.html"><strong aria-hidden="true">3.6.</strong> GC и методы работы с ним</a></li><li class="chapter-item expanded "><a href="../chapter_2/chapter_7.html"><strong aria-hidden="true">3.7.</strong> </a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_3/chapter_3.html"><strong aria-hidden="true">4.</strong> Библиотеки Go</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -173,7 +173,110 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="Горутины-synccord-и-worker-pool"><a class="header" href="#Горутины-synccord-и-worker-pool">Горутины, sync.Cord и Worker Pool</a></h1>
+                        <h3 id="Глубокий-урок-scheduler-в-go"><a class="header" href="#Глубокий-урок-scheduler-в-go">Глубокий урок: "Scheduler в Go"</a></h3>
+<p>Планировщик (scheduler) в Go — это один из краеугольных камней, который обеспечивает эффективное выполнение горутин, управление параллелизмом и конкурентностью. Понимание работы планировщика поможет вам оптимизировать производительность ваших приложений и устранить проблемы, связанные с параллельным выполнением.</p>
+<h3 id="Что-такое-планировщик"><a class="header" href="#Что-такое-планировщик">Что такое планировщик?</a></h3>
+<p><strong>Планировщик</strong> в Go — это компонент, который управляет выполнением горутин, распределяет их по доступным потокам и процессорам. В отличие от традиционных языков программирования, где управление потоками обычно возложено на операционную систему, в Go планировщик реализован на уровне языка.</p>
+<p>Планировщик Go использует <strong>M:N</strong> модель, что означает, что M горутин могут выполняться на N системных потоках. Это позволяет эффективно использовать ресурсы и минимизировать накладные расходы на создание и переключение потоков.</p>
+<h3 id="Архитектура-планировщика-go"><a class="header" href="#Архитектура-планировщика-go">Архитектура планировщика Go</a></h3>
+<p>Планировщик в Go состоит из трех основных компонентов:</p>
+<ol>
+<li>
+<p><strong>G (Goroutine)</strong>: Это легковесная функция, которая выполняется асинхронно. Каждая горутина имеет свои собственные локальные переменные, стек и может взаимодействовать с другими горутинами.</p>
+</li>
+<li>
+<p><strong>M (Machine)</strong>: Это системный поток, который может выполнять горутины. Каждая M соответствует потоку операционной системы, который может быть использован для выполнения G.</p>
+</li>
+<li>
+<p><strong>P (Processor)</strong>: Это логический процессор, который управляет выполнением горутин. Каждый P содержит очередь горутин, ожидающих выполнения, и может быть связан с одной M.</p>
+</li>
+</ol>
+<h4 id="Модель-mn"><a class="header" href="#Модель-mn">Модель M:N</a></h4>
+<p>Модель M:N описывает, как планировщик управляет горутинами. Например:</p>
+<ul>
+<li>
+<p><strong>M</strong> — это системные потоки, которые могут выполнять горутины. Количество M зависит от конфигурации системы и доступных ресурсов.</p>
+</li>
+<li>
+<p><strong>N</strong> — это количество горутин, которые могут быть запущены одновременно. Это число может быть очень большим, и на практике может достигать миллионов.</p>
+</li>
+</ul>
+<p>Планировщик распределяет горутины G по потокам M, обеспечивая высокую производительность и низкие затраты на переключение контекста.</p>
+<h3 id="Алгоритм-работы-планировщика"><a class="header" href="#Алгоритм-работы-планировщика">Алгоритм работы планировщика</a></h3>
+<ol>
+<li>
+<p><strong>Запуск горутины</strong>: Когда вы запускаете новую горутину с помощью ключевого слова <code>go</code>, она помещается в очередь P, связанного с текущим потоком M.</p>
+</li>
+<li>
+<p><strong>Выполнение горутины</strong>: Если P имеет свободные ресурсы, планировщик берет горутину из очереди и начинает ее выполнение на системном потоке M.</p>
+</li>
+<li>
+<p><strong>Блокировка</strong>: Если горутина блокируется (например, при выполнении операции ввода-вывода), планировщик временно приостанавливает ее и выбирает другую горутину для выполнения. Блокировка может происходить также при ожидании данных из канала или при использовании мьютексов.</p>
+</li>
+<li>
+<p><strong>Переключение контекста</strong>: Когда горутина завершает выполнение или блокируется, планировщик переключает выполнение на другую горутину, находящуюся в очереди.</p>
+</li>
+<li>
+<p><strong>Управление ресурсами</strong>: Планировщик автоматически управляет количеством доступных M и P, подстраиваясь под текущее состояние системы и нагрузку.</p>
+</li>
+</ol>
+<h3 id="Примеры-использования-планировщика"><a class="header" href="#Примеры-использования-планировщика">Примеры использования планировщика</a></h3>
+<h4 id="Пример-1-Параллельные-вычисления"><a class="header" href="#Пример-1-Параллельные-вычисления">Пример 1: Параллельные вычисления</a></h4>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "sync"
+)
+
+func main() {
+    var wg sync.WaitGroup
+    jobs := []int{1, 2, 3, 4, 5}
+
+    for _, job := range jobs {
+        wg.Add(1)
+        go func(n int) {
+            defer wg.Done()
+            fmt.Printf("Processing job %d\n", n)
+        }(job)
+    }
+
+    wg.Wait()
+}
+</code></pre>
+<p>В этом примере несколько горутин обрабатывают работы параллельно. Планировщик распределяет выполнение между доступными потоками, увеличивая общую производительность программы.</p>
+<h4 id="Пример-2-Блокирующие-операции"><a class="header" href="#Пример-2-Блокирующие-операции">Пример 2: Блокирующие операции</a></h4>
+<pre><code class="language-go">package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func main() {
+    ch := make(chan string)
+
+    go func() {
+        time.Sleep(2 * time.Second)
+        ch &lt;- "Message from goroutine"
+    }()
+
+    fmt.Println("Waiting for message...")
+    msg := &lt;-ch // Ожидание сообщения из канала
+    fmt.Println(msg)
+}
+</code></pre>
+<p>В этом примере горутина блокируется, ожидая времени, прежде чем отправить сообщение в канал. Планировщик переключает выполнение на другие горутины, пока не будет получено сообщение.</p>
+<h3 id="Профилирование-работы-планировщика"><a class="header" href="#Профилирование-работы-планировщика">Профилирование работы планировщика</a></h3>
+<p>Для анализа производительности вашего приложения и работы планировщика вы можете использовать инструменты профилирования, такие как <strong>pprof</strong> и <strong>runtime/trace</strong>. Эти инструменты помогут выявить узкие места и оптимизировать использование ресурсов.</p>
+<h4 id="Пример-использования-pprof"><a class="header" href="#Пример-использования-pprof">Пример использования pprof:</a></h4>
+<pre><code class="language-bash">go run main.go
+go tool pprof -http=:8080 cpu.prof
+</code></pre>
+<p>Это позволит вам визуализировать использование CPU и взаимодействие горутин.</p>
+<h3 id="Заключение"><a class="header" href="#Заключение">Заключение</a></h3>
+<p>Планировщик в Go — это мощный инструмент, который позволяет легко управлять параллелизмом и конкурентностью в ваших приложениях. Понимание его работы поможет вам оптимизировать производительность и эффективно использовать ресурсы вашей системы.</p>
+<p>Изучение планировщика, архитектуры M:N и методов профилирования — важные шаги к тому, чтобы стать опытным разработчиком на Go. Обратите внимание на примеры и задания, чтобы глубже понять, как использовать горутины и эффективно управлять ими с помощью планировщика.</p>
 
                     </main>
 
