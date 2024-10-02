@@ -207,8 +207,6 @@ fmt.Println(m == nil) // true
 
 <br>
 
---- 
-
 # Дополнительные материалы 
 
 - [Мапы в Go: Уровень Pro](https://habr.com/ru/companies/avito/articles/774618/)

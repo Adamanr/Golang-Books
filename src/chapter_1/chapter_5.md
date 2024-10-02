@@ -82,9 +82,6 @@ func main(){
    copy(slice2, slice1)
    fmt.Println(slice2) // [1, 2, 3]
    ```
-<br>
-
----
 
 ## Map: Отображения в Go
 
@@ -219,8 +216,6 @@ func twoSum(nums []int, target int) []int {
 }
 
 ```
-
----
 
 ## Задания для работы со слайсами
 
